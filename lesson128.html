@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 128 JSON Nedir, Nasıl Kullanılır</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        // Örnek 1
+        // let obj, sendJSON;
+        // obj = { firstName: "Ahmet", lastName: "HELVACI" };
+        // sendJSON = JSON.stringify(obj);
+        // window.location = "Json.php?Json=" + sendJSON;
+
+        // Örnek 2
+        // let obj, takeJSON;
+        // takeJSON = '{ "firstName": "Ahmet", "lastName": "HELVACI" }';
+        // obj = JSON.parse(takeJSON);
+        // $('#result').innerHTML = obj.firstName + " " + obj.lastName;
+
+        // Örnek 3
+        let obj, Json, txt, storegeObj;
+        obj = { firstName: "Ahmet", lastName: "HELVACI" };
+        Json = JSON.stringify(obj);
+        localStorage.setItem("storegeJSON", Json);
+        txt = localStorage.getItem("storegeJSON");
+        storegeObj = JSON.parse(txt);
+        $('#result').innerHTML = storegeObj.firstName + " " + storegeObj.lastName;
+    </script>
+</body>
+
+</html>

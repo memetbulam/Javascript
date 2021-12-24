@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 79 Nesne Oluşturma Yöntemleri</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+        <p id="result5"></p>
+        <p id="result6"></p>
+        <p id="result7"></p>
+        <p id="result8"></p>
+    </div>
+    <script>
+        // Örnek 1
+        // Statik
+        // var person = {
+        //     firstName: "Ahmet",
+        //     lastName: "HELVACI",
+        //     age: 30,
+        //     eyeColor: "Brown",
+        //     confirm: true,
+        //     fullName: function () {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // };
+        // print('result', "person.firstName:", person.firstName);
+        // print('result2', "person.lastName:", person.lastName);
+        // print('result3', "person.age:", person.age);
+        // print('result4', "person.eyeColor:", person.eyeColor);
+        // print('result5', "person.confirm:", person.confirm);
+        // print('result6', "person.fullName():", person.fullName());
+
+        // Örnek 2
+        // Statik(Yavaş)
+        // var person = new Object();
+        // person.firstName = "Mehmet";
+        // person.lastName = "BULAM";
+        // person.age = "23";
+        // person.eyeColor = "Black";
+        // print('result', "person.firstName:", person.firstName);
+        // print('result2', "person.lastName:", person.lastName);
+        // print('result3', "person.age:", person.age);
+        // print('result4', "person.eyeColor:", person.eyeColor);
+
+        // Örnek 3
+        // Dinamik
+        // function person(first, last, age, color) {
+        //     this.firstName = first;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.eyeColor = color;
+        // }
+        // var myPerson = new person("Ahmet", "HELVACI", 30, "Brown");
+        // var myPerson2 = new person("Mehmet", "BULAM", 23, "Black");
+        // print('result', "myPerson.firstName:", myPerson.firstName);
+        // print('result2', "myPerson2.lastName:", myPerson2.lastName);
+
+        // Örnek 4
+        var x1, x2, x3, x4, x5, x6, x7, x8;
+        x1 = new Object();
+        x2 = new Number();
+        x3 = new String();
+        x4 = new Boolean();
+        x5 = new Array();
+        x6 = new RegExp();
+        x7 = new Function();
+        x8 = new Date();
+        print('result', "x1 = new Object():", typeof x1);
+        print('result2', "x2 = new Number():", typeof x2);
+        print('result3', "x3 = new String():", typeof x3);
+        print('result4', "x4 = new Boolean();:", typeof x4);
+        print('result5', "x5 = new Array():", typeof x5);
+        print('result6', "x6 = new RegExp():", typeof x6);
+        print('result7', "x7 = new Function():", typeof x7);
+        print('result8', "x8 = new Date():", typeof x8);
+
+        function print(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + " </b>" + process;
+        }
+    </script>
+
+</body>
+
+</html>

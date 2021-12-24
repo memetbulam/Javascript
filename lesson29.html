@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 29 Math Nesnesi</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+    <p id="result8"></p>
+    <p id="result9"></p>
+    <p id="result10"></p>
+    <p id="result11"></p>
+
+    <script>
+        // Örnek 1
+        document.getElementById('result').innerHTML = "<b>Math.PI: </b>" + Math.PI;
+
+        // Örnek 2
+        document.getElementById('result2').innerHTML = "<b>round(6.7): </b>" + Math.round(6.7) + "<br><b>round(6.3): </b>" + Math.round(6.3);
+
+        // Örnek 3
+        //üslü sayı
+        document.getElementById('result3').innerHTML = "<b>pow(4,2): </b>" + Math.pow(4, 2);
+
+        // Örnek 4
+        // Karekök - Square root
+        document.getElementById('result4').innerHTML = "<b>sqrt(64): </b>" + Math.sqrt(64);
+
+        // Örnek 5
+        // Mutlak değer - Absolute value
+        document.getElementById('result5').innerHTML = "<b>abs(-5): </b>" + Math.abs(-5);
+
+        // Örnek 6
+        document.getElementById('result6').innerHTML = "<b>ceil(9.1)(Tavan): </b>" + Math.ceil(9.1);
+        document.getElementById('result7').innerHTML = "<b>floor(9.9)(Zemin): </b>" + Math.floor(9.9);
+
+        // Örnek 7
+        // Sin, Cos
+        document.getElementById('result8').innerHTML = "<b>sin(90 * (Math.PI / 180)): </b>" + Math.sin(90 * (Math.PI / 180));
+        document.getElementById('result9').innerHTML = "<b>cos(90 * (Math.PI / 180)): </b>" + Math.cos(0 * (Math.PI / 180));
+
+        // Örnek 8
+        // Sin, Cos
+        document.getElementById('result10').innerHTML = "<b>min(100, -1, 0, 15, -300): </b>" + Math.min(100, -1, 0, 15, -300);
+        document.getElementById('result11').innerHTML = "<b>max(100, -200, 0, -20, 35, 300): </b>" + Math.max(100, -200, 0, -20, 35, 300);
+    </script>
+</body>
+
+</html>

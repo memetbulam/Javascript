@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 59 Hata İsimleri ve Anlamları</title>
+</head>
+
+<body>
+    <button type="button" onclick="rangeError()">Range Error</button>
+    <p id="result"></p>
+    <button type="button" onclick="referenceError()">Reference Error</button>
+    <p id="result2"></p>
+    <button type="button" onclick="syntaxError()">Syntax Error</button>
+    <p id="result3"></p>
+    <button type="button" onclick="typeError()">Type Error</button>
+    <p id="result4"></p>
+    <button type="button" onclick="uriError()">URI Error</button>
+    <p id="result5"></p>
+
+    <script>
+
+        // RangeError = "Aralık dışı" bir sayı oluştuğunda
+        function rangeError() {
+            var number = 7;
+            try {
+                number.toPrecision(400);
+            } catch (e) {
+                show('result', 'number.toPrecision(400)', e.name, e.message);
+            }
+        }
+
+        // ReferenceError = Usulsüz bir referans oluştuğunda
+        function referenceError() {
+            var number = 7;
+            try {
+                alerd("Javascript");
+            } catch (e) {
+                show('result2', 'alerd("Javascript")', e.name, e.message);
+            }
+        }
+
+        // SyntaxError = Yazım dizimi hatası oluştuğunda
+        function syntaxError() {
+            var number = 7;
+            try {
+                eval("alert(Javascript')");
+            } catch (e) {
+                show('result3', "eval('alert(Javascript')')", e.name, e.message);
+            }
+        }
+
+        // TypeError = Bir tür hatası oluştuğunda
+        function typeError() {
+            var number = 7;
+            try {
+                number.toUpperCase();
+            } catch (e) {
+                show('result4', 'number.toUpperCase();', e.name, e.message);
+            }
+        }
+
+        function uriError() {
+            var number = 7;
+            try {
+                decodeURI("%");
+            } catch (e) {
+                show('result5', 'decodeURI("%")', e.name, e.message);
+            }
+        }
+
+        function show(id, error, eName, eMessage) {
+            document.getElementById(id).innerHTML = "<b>Hata: </b>" + error + "<br>" + "<b>Hata Adı: </b>" + eName + "<br>"
+                + "<b>Hata Mesajı: </b>" + eMessage;
+        }
+    </script>
+</body>
+
+</html>

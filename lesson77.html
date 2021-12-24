@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 77 getElementsByName</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <!--Örnek 1-->
+    <!-- <div class="container m-2">
+        <form id="formValidate" name="formValidate">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="form-control">
+            </div>
+            <button type="button" onclick="javascript:show()" class="btn- btn-dark">Click</button>
+
+            <p name="test" class="alert alert-info mt-2"></p>
+            <p name="test" class="alert alert-info"></p>
+            <p name="test" class="alert alert-info"></p>
+            <p name="test" class="alert alert-info"></p>
+        </form>
+    </div> -->
+
+    <!--Örnek 2-->
+    <div class="container m-2">
+        <form id="formValidate" name="formValidate">
+            <button type="button" onclick="javascript:show()" class="btn- btn-dark">Click</button>
+
+            <p name="test" class="alert alert-info mt-2" style="display: none;"></p>
+            <p name="test" class="alert alert-info" style="display: none;"></p>
+            <p name="test" class="alert alert-info" style="display: none;"></p>
+            <p name="test" class="alert alert-info" style="display: none;"></p>
+        </form>
+    </div>
+    <script>
+        // Örnek 1
+        // function show() {
+        //     var username, usernames;
+        //     username = document.getElementById('username').value;
+        //     usernames = document.getElementsByName('test')[0];
+        //     usernames.innerHTML = username;
+        // }
+
+        // Örnek 2
+        function show() {
+            var usernames, i, j;
+            usernames = document.getElementsByName('test');
+
+            for (i = 0; i < usernames.length; i++) {
+                usernames[i].style.display = "block";
+                usernames[i].innerHTML = (i + 1) + ". Name Elemanı";
+                // usernames[0].innerHTML = "Javascript";
+                // usernames[1].innerHTML = "Angular JS";
+                // usernames[2].innerHTML = "React JS";
+                // usernames[3].innerHTML = "Vue JS";
+            }
+
+
+            // for (j = 0; j < usernames.length; j++){
+
+            // }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

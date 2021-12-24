@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 112 Ecmascript 6 Destructuring Assignment (Çoklu Değer Atama)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result" class="mb-5"></p>
+        <p id="result2"></p>
+    </div>
+    <script>
+        "use strict";
+        let result = document.querySelector('#result');
+        let langs = [
+            "Javascript",
+            "Angular JS",
+            "React JS",
+            "Vue JS",
+            "Node JS",
+            "PHP",
+            "Asp.Net",
+            "JSP",
+            "coldFusion",
+            "HTML5",
+            "CSS3"
+        ];
+        let person = { firstName: "Ahmet", lastName: "HELVACI", age: 30 };
+
+        // Örnek 1
+        // let l1 = langs[0];
+        // let l2 = langs[1];
+        // let l3 = langs[2];
+        // let l4 = langs[3];
+        // let l5 = langs[4];
+        // result.innerHTML = l1 + "<br>" + l2 + "<br>" + l3 + "<br>" + l4 + "<br>" + l5;
+
+        // Örnek 2
+        // let [l1, , l2, , l3, l4, , l5] = langs;
+        // result.innerHTML = l1 + "<br>" + l2 + "<br>" + l3 + "<br>" + l4 + "<br>" + l5;
+
+        // Örnek 3
+        let { firstName, lastName } = person;
+        result2.innerHTML = firstName + " " + lastName;
+    </script>
+</body>
+
+</html>

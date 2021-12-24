@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 4 JavaScript ile Neler Yapılabilir (Bölüm 2)</title>
+</head>
+
+<body>
+    <!--Örnek 1-->
+    <!-- <input type="button" value="Open Light" onclick="openLight();">
+    <img src="img/bulboff.png" alt="off" id="Picture">
+    <input type="button" value="Close Light" onclick="closeLight();"> -->
+
+    <!--Örnek 2-->
+    <h2 id="result" style="display: none;">JavaScript ile css değiştir!</h2>
+    <input type="button" value="Change Css" onclick="changeCss();">
+
+    <script>
+        // Örnek 1
+        // function openLight() {
+        //     document.getElementById('Picture').src="img/bulbon.png";
+        // }
+        // function closeLight() {
+        //     document.getElementById('Picture').src="img/bulboff.png";
+        // }
+
+        // Örnek 2
+        function changeCss() {
+            document.getElementById('result').style.color = "red";
+            document.getElementById('result').style.fontSize = "48px";
+            document.getElementById('result').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

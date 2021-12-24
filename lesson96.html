@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 96 removeEventListener</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <div id="text" class="alert alert-danger">HTML DOM Remove EventListener</div>
+        <button type="button" id="Btn" class="btn btn-dark">Click</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        // Örnek 1
+        // var text = document.querySelector('#text');
+        // var Btn = document.querySelector('#Btn');
+        // text.addEventListener('mousemove', random, false);
+        // function random() {
+        //     document.querySelector('#result').innerText = Math.random();
+        // }
+        // Btn.onclick = function () {
+        //     text.removeEventListener('mousemove', random);
+        // }
+
+        // Örnek 2
+        // Eski sürüm tarayıclar için
+        var Btn = document.querySelector('#Btn');
+        if (Btn.addEventListener) {
+            Btn.addEventListener("click", mClick, false);
+        } else if (Btn.attachEvent) {
+            Btn.attachEvent("onclick", mClick);
+        }
+        function mClick() {
+            alert("Javascript");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 111 Ecmascript 6 Default Parameters (Varsayılan Parametreler)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+        <p id="result2"></p>
+    </div>
+    <script>
+        "use strict";
+        // Örnek 1
+        let result = document.querySelector('#result');
+        function show(r, pi = 3.14) {
+            return pi * r * r;
+        }
+        result.innerHTML = show(1);
+
+        // Örnek 2
+        let result2 = document.querySelector('#result2');
+        function getPow(x, y = 2) {
+            return Math.pow(x, y);
+        }
+        result2.innerHTML = getPow(5) + "<br>";
+        result2.innerHTML += getPow(2, 3);
+    </script>
+</body>
+
+</html>

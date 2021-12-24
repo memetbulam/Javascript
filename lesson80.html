@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 79 Nesne Oluşturma Yöntemleri</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+        <p id="result5"></p>
+        <p id="result6"></p>
+        <p id="result7"></p>
+        <p id="result8"></p>
+    </div>
+    <script>
+        // Örnek 1
+        // function person(first, last, age, color) {
+        //     this.firstName = first;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.eyeColor = color;
+        //     this.fullName = function () {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // var people = new person("Ahmet", "HELVACI", 30, "Brown");
+        // var m = "lastName";
+        // print('result', "people['firstName']:", people["firstName"]);
+        // print('result2', "people[m]:", people[m]);
+
+        // Örnek 2
+        // function person(first, last, age, color) {
+        //     this.firstName = first;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.eyeColor = color;
+        //     this.fullName = function () {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // var people, x, message = "";
+        // people = new person("Ahmet", "HELVACI", 30, "Brown");
+        // for (x in people) {
+        //     message += people[x] + "<br>";
+        // }
+        // print('result', "", message);
+
+        // Örnek 3
+        // function person(first, last, age, color) {
+        //     this.firstName = first;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.eyeColor = color;
+        //     this.fullName = function () {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // var people, x, message = "";
+        // people = new person("Ahmet", "HELVACI", 30, "Brown");
+        // people.hair = true;
+        // print('result', "people.hair:", people.hair);
+        // delete people.hair;
+        // print('result2', "people.hair(Delete):", people.hair);
+
+        // Örnek 4
+        function person(first, last, age, color) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = color;
+            this.fullName = function () {
+                return this.firstName + " " + this.lastName;
+            }
+            this.changeName = function (name) {
+                return this.firstName = name;
+            }
+        }
+        var people = new person("Ahmet", "HELVACI", 30, "Brown");
+        people.changeName("Mehmet");
+        print('result', "people.firstName(Change):", people.firstName);
+
+        function print(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + " </b>" + process;
+        }
+    </script>
+
+</body>
+
+</html>

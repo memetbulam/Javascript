@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 119 Ecmascript 6 for of kullanımı</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        // Örnek 1
+        // let person = { firstName: "Ahmet", lastName: "HELVACI", age: 30 };
+        // for (let i in person)
+        //     $('#result').innerHTML += person[i] + "<br>";
+
+        // Örnek 2
+        let person = "Javascript Ecmascript 6";
+        for (let i of person)
+            $('#result').innerHTML += i + "<br>";
+    </script>
+</body>
+
+</html>

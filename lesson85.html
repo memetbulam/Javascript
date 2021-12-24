@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 85 HTML DOM (Document Object Model)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <h1 id="head">Javascript Başlığı</h1>
+        <a href="#">Bu bir link</a>
+        <p id="result">Bu bir Paragraf</p>
+        <img src="img/jsHtmlDom.PNG" width="650" height="400" alt="HTML Dom">
+    </div>
+    <script>
+        document.getElementById('result').innerHTML = "HTML DOM ile değiştirildi!";
+        document.getElementById('head').style.fontSize = "64px";
+    </script>
+
+</body>
+
+</html>

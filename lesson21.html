@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 21 Events (Olaylar)</title>
+</head>
+
+<!--Onload: Sayfa yüklendiğinde
+<body onLoad="message();">-->
+
+<body>
+    <!--onchange-->
+    <select id="MySelect" onchange="messageChange();">
+        <option>Php</option>
+        <option>Asp.Net</option>
+        <option>ColdFusion</option>
+        <option>JSP</option>
+    </select>
+    <!--onClick-->
+    <button type="button" onclick="messageClick();">Click</button>
+
+    <!--onDblclick-->
+    <button type="button" ondblclick="messageDblClick();">Double Click</button>
+
+    <!--onMouseOver-->
+    <p style="width: 150px;height: 50px; border: 2px solid black;" onmouseover="messageMouseOver();">
+        onMouseOver Event</p>
+
+    <!--onmouseout-->
+    <p style="width: 150px;height: 50px; border: 2px solid black;" onmouseout="messageMouseOut();">
+        onMouseOut Event</p>
+
+    <!--onmousedown, onmouseup-->
+    <p id="MouseDownUp" onmousedown="messageMouseDown();" onmouseup="messageMouseUp();">MouseDown - MouseUp Event</p>
+
+    <!--onmousemove-->
+    <p style="width: 200px;height: 100px; border: 2px solid black;" onmousemove="messageMouseMove(event);"></p>
+    <div id="MouseMove"></div>
+
+    <!--FocusBlur-->
+    <input type="text" id="TxtFocusBlur" onfocus="messageFocus();" onblur="messageBlur();"> <br><br>
+
+    <!--KeyDown, Up-->
+    <input type="text" id="KeyDown" onkeydown="messageKeyDown();" onkeyup="messageKeyUp();">
+    <input type="text" id="KeyUp" onkeyup="messageKeyUp();"><br><br>
+
+    <!--Select-->
+    <input type="text" onselect="messageSelect();" value="Javascript">
+
+    <script>
+        function message() {
+            alert('Javascript Aktif, Sayfa Yüklendi!');
+        }
+        function messageChange() {
+            alert('Bir şeyler değişti!');
+        }
+        function messageClick() {
+            alert('Bana Tıkladın!');
+        }
+        function messageDblClick() {
+            alert("Bana 'İki kere' Tıkladın!");
+        }
+        function messageMouseOver() {
+            alert("Mouse Üzerimde, MouseOver Tetiklendi!");
+        }
+        function messageMouseOut() {
+            alert("Mouse Üzerimden çektin, MouseOut Tetiklendi!");
+        }
+        function messageMouseDown() {
+            document.getElementById('MouseDownUp').style.color = "red";
+        }
+        function messageMouseUp() {
+            document.getElementById('MouseDownUp').style.color = "green";
+        }
+        function messageMouseMove(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            document.getElementById('MouseMove').innerHTML = "Koordinatlar x:" + x + " Y: " + y;
+        }
+        function messageFocus() {
+            document.getElementById('TxtFocusBlur').style.borderColor = "blue";
+        }
+        function messageBlur() {
+            document.getElementById('TxtFocusBlur').style.borderColor = "red";
+        }
+        function messageKeyDown() {
+            alert("Bir Tuşa Bastın!");
+        }
+        function messageKeyUp() {
+            alert("Elini Tuştan Çektin!");
+        }
+        function messageSelect() {
+            alert("Bir şey seçtin!");
+        }
+    </script>
+</body>
+
+</html>

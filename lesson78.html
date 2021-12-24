@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 78 Objects (Detaylı Anlatım)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+        <p id="result5"></p>
+        <p id="result6"></p>
+    </div>
+    <script>
+        // Birden fazla veri türü
+        var person = {
+            firstName: "Ahmet",
+            lastName: "HELVACI",
+            age: 30,
+            eyeColor: "Brown",
+            confirm: true,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        print('result', "person.firstName:", person.firstName);
+        print('result2', "person.lastName:", person.lastName);
+        print('result3', "person.age:", person.age);
+        print('result4', "person.eyeColor:", person.eyeColor);
+        print('result5', "person.confirm:", person.confirm);
+        print('result6', "person.fullName():", person.fullName());
+
+
+
+        function print(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + " </b>" + process;
+        }
+    </script>
+
+</body>
+
+</html>

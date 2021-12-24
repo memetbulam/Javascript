@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 23 String Metodları</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <hr>
+    <p id="result7"></p>
+    <p id="result8"></p>
+    <p id="result9"></p>
+    <p id="result10"></p>
+    <p id="result11"></p>
+    <p id="result12"></p>
+
+    <script>
+        printScreen();
+        function printScreen() {
+            // Sıfırdan başlayarak sayar
+            var text = "Javascript Angular JS, React JS, Vue JS, Node JS";
+            document.getElementById('result').innerHTML = "<b>length:</b> " + text.length;
+
+            document.getElementById('result2').innerHTML = "<b>indexOf:</b> " + text.indexOf("JS");
+            document.getElementById('result3').innerHTML = "<b>indexOf(2. JS bul):</b> " + text.indexOf("JS", 21);
+
+            document.getElementById('result4').innerHTML = "<b>lastIndexOf:</b> " + text.lastIndexOf("JS");
+            document.getElementById('result5').innerHTML = "<b>Metin bulunamazsa:</b> " + text.lastIndexOf("Yok");
+            // İlk bulduğu yer
+            document.getElementById('result6').innerHTML = "<b>Search:</b> " + text.search("JS");
+
+
+            var text2 = "Javascript Angular JS, React JS, Vue JS, Node JS ";
+            document.getElementById('result7').innerHTML = "<b>slice(Dilim):</b> " + text2.slice(10, 21);
+            document.getElementById('result8').innerHTML = "<b>slice(Dilim) Sondan:</b> " + text2.slice(-8, -1);
+            document.getElementById('result9').innerHTML = "<b>substring:</b> " + text2.substring(10);
+            document.getElementById('result10').innerHTML = "<b>substr:</b> " + text2.substr(11, 4);
+            document.getElementById('result11').innerHTML = "<b>substr(Negatif):</b> " + text2.substr(-16, 6);
+            //İlk bulduğu "JS" kelimesini değiştirir, Büyük küçük harfk duyarlıdır
+            document.getElementById('result12').innerHTML = "<b>replace(değiştir):</b> " + text2.replace("JS", "<b>Değişti</b>");
+        }
+    </script>
+</body>
+
+</html>

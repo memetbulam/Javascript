@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 54 Bit Düzeyinde XOR işlemi</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+
+    <script>
+        // ^
+        show('result', "0 ^ 0", 0 ^ 0);
+        show('result1', "0 ^ 1", 0 ^ 1);
+        show('result2', "1 ^ 0", 1 ^ 0);
+        show('result3', "1 ^ 1", 1 ^ 1);
+        // 1111 ^ 0000
+        show('result4', "15 ^ 0", 15 ^ 0);
+        // 1111 ^ 0001
+        show('result5', "15 ^ 1", 15 ^ 1);
+        // 1111 ^ 0100 = 1011 = 11
+        show('result6', "15 ^ 4", 15 ^ 4);
+        // 0101 ^ 0001 = 0100 = 4
+        show('result7', "5 ^ 1", 5 ^ 1);
+
+        function show(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + ": </b>" + process;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 38 Boolean Veri Türü</title>
+</head>
+
+<body>
+    <button type="button" onclick="verify();">Doğrula</button>
+    <p id="result"></p>
+    <hr>
+    <button type="button" onclick="verify2();">7 > 70</button>
+    <p id="result2"></p>
+    <hr>
+    <button type="button" onclick="verify3();">Doğrula 2</button>
+    <p id="result3"></p>
+    <hr>
+    <button type="button" onclick="verify4();">Doğrula 3</button>
+    <p id="result4"></p>
+    <hr>
+    <button type="button" onclick="verify5();">Doğrula 4</button>
+    <p id="result5"></p>
+    <hr>
+
+    <!--Örnek 6-->
+    <input type="text" id="Number1" placeholder="1. Değeri Giriniz...">
+    <input type="text" id="Number2" placeholder="2. Değeri Giriniz...">
+    <button type="button" onclick="verifyNumber();">Eşit mi?</button>
+    <p id="result6"></p>
+
+    <script>
+        var x = true;
+        var y = false;
+
+        // Örnek 1
+        function verify() {
+            document.getElementById('result').innerHTML = x;
+        }
+
+        // Örnek 2
+        function verify2() {
+            document.getElementById('result2').innerHTML = Boolean(7 > 70);
+            // document.getElementById('result2').innerHTML = 7 > 70;
+        }
+
+        // Örnek 3
+        function verify3() {
+            var x; // Undefined
+            var y = 7 / "JS"; // NaN
+            document.getElementById('result3').innerHTML =
+                "<b>TRUE</b> <br>" +
+                "<b>Number: </b>" + Boolean(700) + "<br>" +
+                "<b>PI: </b>" + Boolean(3.14) + "<br>" +
+                "<b>Negative: </b>" + Boolean(-70) + "<br>" +
+                "<b>String: </b>" + Boolean("Javascript") + "<br>" +
+                "<b>String 'True': </b>" + Boolean("true") + "<br>" +
+
+                "<br><b>FALSE</b> <br>" +
+                "<b>Sıfır(0): </b>" + Boolean(0) + "<br>" +
+                "<b>Eksi Sıfır(-0): </b>" + Boolean(-0) + "<br>" +
+                "<b>Boş String: </b>" + Boolean("") + "<br>" +
+                "<b>null: </b>" + Boolean(null) + "<br>" +
+                "<b>false: </b>" + Boolean(false) + "<br>" +
+                "<b>x: </b>" + Boolean(x) + "<br>" +
+                "<b>y: </b>" + Boolean(y) + "<br>" +
+                "<b>NaN: </b>" + Boolean(NaN);
+        }
+
+        // Örnek 4
+        function verify4() {
+            var x = false;
+            var y = new Boolean(false);
+            document.getElementById('result4').innerHTML =
+                "<b>x'in Türü: </b>" + typeof x + "<br>" +
+                "<b>y'nin Türü: </b>" + typeof y + "<br>" +
+                "<b>x==y: </b>" + (x == y) + "<br>" +
+                "<b>x===y: </b>" + (x === y);
+        }
+
+        // Örnek 5
+        function verify5() {
+            var x = true;
+            var y = false;
+            if (x == y) {
+                document.getElementById('result5').innerHTML = "Eşit";
+            } else {
+                document.getElementById('result5').innerHTML = "Eşit Değil!";
+            }
+        }
+
+        // Örnek 6
+        function verifyNumber() {
+            var x = Number(document.getElementById('Number1').value);
+            var y = Number(document.getElementById('Number2').value);
+            if (isNaN(x) || isNaN(y)) {
+                document.getElementById('result6').innerHTML = "Lüften Sayı Giriniz!";
+            } else {
+                if (x == y) {
+                    document.getElementById('result6').innerHTML = "Eşit";
+                } else {
+                    document.getElementById('result6').innerHTML = "Eşit Değil!";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

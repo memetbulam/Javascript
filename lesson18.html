@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 18 Functions (Bölüm 2)</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        //Number - Derece hesabı
+        function toCelcius(x) {
+            return (5 / 9) * (x - 32);
+        }
+        document.write(toCelcius(59) + "<br>");
+
+        //String
+        function getName(name, surname) {
+            return name + " " + surname;
+        }
+        document.write(getName("Ahmet", "Helvacı") + "<br>");
+
+        //İç içe
+        function Sum(data1, data2) {
+            return data1 + data2;
+        }
+        function Calculate(pr1, pr2) {
+            return Sum(pr1, pr2) * Sum(pr1, pr2);
+        }
+        /* var getNumber = Calculate(4, 5);
+        document.write(getNumber); */
+        function printScreen(par) {
+            document.write(par + "<br>");
+            // alert(par);
+        }
+        printScreen(Calculate(4, 5));
+        printScreen(Calculate(7, 4));
+        printScreen(Calculate(5, 3));
+        printScreen(Calculate(2, 2));
+        printScreen(Calculate(1, 1));
+    </script>
+</body>
+
+</html>

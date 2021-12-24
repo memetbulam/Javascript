@@ -1,0 +1,35 @@
+{
+    "firstName": "Ahmet",
+    "lastName": "HELVACI",
+    "age": 25,
+    "info": [
+        "57",
+        "1.65",
+        "Black"
+    ],
+    "cars": [
+        {
+            "nameCar": "Ford",
+            "models": [
+                "fiesta",
+                "focus",
+                "mustang"
+            ]
+        },
+        {
+            "nameCar": "BMW",
+            "models": [
+                "320",
+                "x3",
+                "x5"
+            ]
+        },
+        {
+            "nameCar": "Fiat",
+            "models": [
+                "500",
+                "Panda"
+            ]
+        }
+    ]
+}

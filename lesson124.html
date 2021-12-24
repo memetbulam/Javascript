@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 124 Ecmascript 6 Binary ve Octal Sayılar</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        $('#result').innerHTML =
+            "<b>0b00-1001: </b>" + 0b001001 +
+            "<br><b>0b00-1011: </b>" + 0b001011;
+
+        $('#result').innerHTML +=
+            "<br><b>0o-520: </b>" + 0o520 +
+            "<br><b>0o-210: </b>" + 0o210;
+    </script>
+</body>
+
+</html>

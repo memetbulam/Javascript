@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 6 Çıktı Alma Metodları</title>
+    <script>
+        window.alert('Window Alert');
+        console.log('Consol.log -Çıktı için ilgin bir yöntem');
+        console.log('Consol.log -Çıktı için ilgin bir yöntem - 2');
+    </script>
+</head>
+
+<body>
+    <div id="result"></div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <input type="button" value="Click" onclick="document.write('document.write fonksiyonunu çağırdık');">
+    <script>
+        document.getElementById('result').innerHTML = "Javascript ile innerHTML Kullanımı";
+    </script>
+</body>
+
+</html>

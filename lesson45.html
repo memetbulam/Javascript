@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 44 Algoritma Bilinci (Çift ve tek sayı bulma, faktöriyel hesaplama)</title>
+</head>
+
+<body>
+    <input type="text" id="takeNumber">
+    <button type="button" onclick="show();">Hesapla</button>
+    <p id="result"></p>
+    <hr>
+    <button type="button" onclick="show2();">Hesapla</button>
+    <p id="result2"></p>
+
+    <script>
+        // Anlatım
+        function show() {
+            var take, i, faktor = 1;
+            take = Number(document.getElementById('takeNumber').value);
+            for (i = 1; i <= take; i++) {
+                faktor = faktor * i;
+                // Faktor - i
+                //    1   - 1
+                //    1   - 2
+                //    2   - 3
+                //    6   - 4
+                //    24  - 5
+            }
+            document.getElementById('result').innerHTML = faktor;
+        }
+
+        // (x in pc)= pc nesnesini x değişkeninin içerisine at
+        function show2() {
+            var message = "";
+            var pc = { name: "Asus", hddType: "SSD", ram: "16 Gb", year: 2009 }
+            for (x in pc) {
+                message += pc[x] + " - ";
+            }
+            document.getElementById('result2').innerHTML = message;
+        }
+
+    </script>
+</body>
+
+</html>

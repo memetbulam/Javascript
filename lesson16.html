@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 16 Veri Türlerini Bulma (typeof Kullanımı)</title>
+</head>
+
+<body>
+    <div id="resultNumber"></div>
+    <div id="resultString"></div>
+    <div id="resultBoolean"></div>
+    <div id="resultUndefined"></div>
+    <div id="resultNullString"></div>
+    <div id="resultObject"></div>
+    <script>
+        // undefined türü= undefined, null'un türü: Object
+        var x, y, z, a, b, person;
+        x = 7; //Number
+        y = "Javascript"; // String
+        z = true; // Boolean
+        b = undefined; // undefined
+        a = ""; // null string
+        person = { firstName: "Ahmet", lastName: "HELVACI" }; // Object
+
+        document.getElementById('resultNumber').innerHTML = "x: " + typeof x;
+        document.getElementById('resultString').innerHTML = "y: " + typeof y;
+        document.getElementById('resultBoolean').innerHTML = "z: " + typeof z;
+        document.getElementById('resultUndefined').innerHTML = "b: " + typeof b;
+        document.getElementById('resultNullString').innerHTML = "a'nın değeri: " + a + " Türü: " + typeof a;
+        document.getElementById('resultObject').innerHTML = "person: " + typeof person;
+    </script>
+</body>
+
+</html>

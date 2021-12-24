@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 15 Veri Türleri (Bölüm 2)</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <script>
+
+        //Boolean
+        var x, y, z;
+        x = 7, y = 7, z = 70;
+        document.getElementById('result').innerHTML = (x == y) + "<br>" + (x == z) + "<br><br>";
+
+        // Array
+        var langs = ["Javascript", "Angular JS", "React JS", "Vue JS", "Node JS", "JQUERY"];
+        var i;
+        for (i = 0; i < langs.length; i++) {
+            document.getElementById('result2').innerHTML += langs[i] + "<br>";
+        }
+        document.write("<br>");
+
+        //object
+        var person = { firsName: "Ahmet", lastName: "HELVACI" };
+    </script>
+</body>
+
+</html>

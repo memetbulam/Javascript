@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 56 Sola ve Sağa Bit Kaydırma</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+
+    <script>
+        // Sola kaydırma
+        // 0101 = 1010 = 10
+        show('result', "5 << 1", 5 << 1);
+
+        // Sağa kaydırma
+        // 0101 = 0010 = 2
+        show('result1', "5 >> 1", 5 >> 1);
+        
+        // 0101 =5
+        // 1010 = ~5
+        // ~5 +1 = 1011 = -5
+        show('result2', "-5 >> 1", -5 >> 1);
+
+        function show(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + ": </b>" + process;
+        }
+    </script>
+</body>
+
+</html>

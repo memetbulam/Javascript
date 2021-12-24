@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 92 onChange, onMouseOver, onMouseOut Olayları</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="container m-3">
+        <input type="text" id="username" name="username" onchange="changeFunction()" class="form-control mb-3" />
+        <img src="img/bulboff.png" alt="" id="picture" width="100" height="100" onmouseover="mOver(this)"
+            onmouseout="mOut(this)" />
+    </div>
+    <script>
+        // Örnek 1
+        function changeFunction() {
+            var getInput = document.querySelector('#username');
+            getInput.value = getInput.value.toUpperCase();
+        }
+
+        // Örnek 2
+        function mOver(obj) {
+            obj.src = "img/bulbon.png";
+        }
+        function mOut(obj) {
+            obj.src = "img/bulboff.png";
+        }
+    </script>
+</body>
+
+</html>

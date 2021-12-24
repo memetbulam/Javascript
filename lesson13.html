@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 13 Aritmetik İşlemler</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+    <div id="result6"></div>
+    <div id="result7"></div>
+    <div id="result8"></div>
+    <div id="result9"></div>
+    <div id="result10"></div>
+    <div id="result11"></div>
+    <script>
+        var x, y, a, sum;
+        x = 5;
+        y = 52;
+        a = "String";
+        sum = 5 * (2 / 2) + 2 - 1;
+
+        // &&= ve
+        if (x < y && x != y) {
+            document.getElementById('result').innerHTML = "0. Koşul Sağlandı <br>";
+        } else {
+            document.getElementById('result').innerHTML = "0. Koşul Sağlanamadı <br>";
+        }
+        if (x < y && x == y) {
+            document.getElementById('result1').innerHTML = "1. Koşul Sağlandı <br>";
+        } else {
+            document.getElementById('result1').innerHTML = "1. Koşul Sağlanamadı <br>";
+        }
+
+        // ||= veya
+        if (x < y || x == y) {
+            document.getElementById('result2').innerHTML = "2. Koşul Sağlandı <br>";
+        } else {
+            document.getElementById('result2').innerHTML = "2. Koşul Sağlanamadı <br>";
+        }
+
+        // ! Eşit değilse (x!=y)
+        if (!(x == y)) {
+            document.getElementById('result3').innerHTML = "3. Koşul Sağlandı <br>";
+        } else {
+            document.getElementById('result3').innerHTML = "3. Koşul Sağlanamadı <br>";
+        }
+
+        // Değişkenin türünü verir
+        document.getElementById('result4').innerHTML = "Tür: " + typeof a;
+
+        // İşlem önceliği
+        document.getElementById('result5').innerHTML = "İşlem önceliği: " + sum;
+
+    </script>
+</body>
+
+</html>

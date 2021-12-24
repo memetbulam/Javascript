@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 110 Ecmascript 6 const kullanımı</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        // Örnek 1
+        // const PI = 3.14;
+        // PI = 7;
+
+        // Örnek 2
+        // const PI = 3.14;
+        // areaCalculate();
+        // function areaCalculate() {
+        //     const PI = 7;
+        //     document.querySelector('#result').innerHTML = "<b> Yerel PI: </b>" + PI + "<br>";
+        // }
+        // document.querySelector('#result').innerHTML += "<b>Global PI: </b>" + PI;
+
+        // Örnek 3
+        // const PI;
+        // PI = 3.14;
+        // document.querySelector('#result').innerHTML = PI;
+
+        // Örnek 4
+        // const PI = 3.14;
+        // {
+        //     const PI = 7;
+        //     document.querySelector('#result').innerHTML = "Yerel PI: " + PI + "<br>";
+        // }
+        // document.querySelector('#result').innerHTML += "Global PI: " + PI;
+
+        // Örnek 5
+        // Sabit Nesne
+        // const lang = { Name: "Javascript", type: "Ecmascript 6", year: 2015 };
+        // lang.Name = "Node JS";
+        // document.querySelector('#result').innerHTML = lang.Name;
+
+        // Örnek 6
+        // const lang = ["Javascript", "Angular JS", "React JS"];
+        // lang[0] = "Vue JS";
+        // lang.push("Node JS");
+        // document.querySelector('#result').innerHTML = lang;
+
+        // Örnek 7
+        lang = "Javascript";
+        const lang;
+        document.querySelector('#result').innerHTML = lang;
+
+    </script>
+</body>
+
+</html>

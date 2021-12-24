@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 57 Regular Expressions (Düzenli İfadeler)</title>
+</head>
+
+<body>
+    <input type="email">
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+
+    <script>
+        //     /.../i = Büyük küçük harfe duyarlı değil
+        //     /.../g = Tüm metinde arama yapar
+        //     /.../m = Birden fazla satırda arama yapmayı sağlar
+        // \d = Rakam bul, \s Boşluk bul
+        var text = "Javascript Lorem CSS ipsum dolor sit amet, consectetur Javascript adipiscing elit";
+
+        document.getElementById('result').innerHTML = text.search(/javascript/igm);
+        document.getElementById('result2').innerHTML = /Jav/.test(text);
+        document.getElementById('result3').innerHTML = /Jav/.exec(text);
+    </script>
+</body>
+
+</html>

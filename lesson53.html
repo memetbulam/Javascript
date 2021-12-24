@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 53 Bit Düzeyinde OR İşlemi</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+
+    <script>
+        // |
+        show('result', "0 | 0", 0 | 0);
+        show('result1', "0 | 1", 0 | 1);
+        show('result2', "1 | 0", 1 | 0);
+        show('result3', "1 | 1", 1 | 1);
+        // 1111 | 0000
+        show('result4', "15 | 0", 15 | 0);
+        // 1010 | 0101
+        show('result5', "10 | 5", 10 | 5);
+
+        function show(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + ": </b>" + process;
+        }
+    </script>
+</body>
+
+</html>

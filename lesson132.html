@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 132 JSON Objects</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+        <p id="result2"></p>
+    </div>
+    <script>
+        "use strict";
+        // Örnek 1
+        // let obj, i;
+        // obj = {
+        //     "firstName": "Ahmet",
+        //     "lastName": "HELVACI",
+        //     "age": 25
+        // };
+        // for (i in obj) {
+        //     $('#result').innerHTML += obj[i] + "<br>";
+        // }
+
+        // Örnek 2
+        let obj, i;
+        obj = {
+            "firstName": "Ahmet",
+            "lastName": "HELVACI",
+            "age": 25,
+            "info": { "weight": 57, "length": 1.70, "hair": "black" }
+        };
+        obj["info"]["hair"] = "Yellow";
+        delete obj["info"]["length"];
+        for (i in obj["info"]) {
+            $('#result2').innerHTML += obj["info"][i] + "<br>";
+        }
+    </script>
+</body>
+
+</html>

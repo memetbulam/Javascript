@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 74 Form Elemanlarına Ulaşma</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container mt-1">
+        <form id="frmBegin" name="frmBegin">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="pass">Password:</label>
+                <input type="text" class="form-control" id="pass" name="password">
+            </div>
+            <button type="button" class="btn btn-success" onclick="printScreen()">Click</button>
+        </form>
+        <p id="result" class="alert alert-success mt-3"></p>
+    </div>
+    <script>
+        function printScreen() {
+            var result = "", usernameValue, passValue;
+            result = document.getElementById('result');
+            // usernameValue = document.forms["frmBegin"]["username"].value;
+            usernameValue = document.frmBegin.username.value;
+            passValue = document.forms[0].elements[1].value;
+
+            result.innerHTML = "<b>User Name: </b>" + usernameValue + "<br>" + "<b>Password: </b>" + passValue;
+
+        }
+    </script>
+</body>
+
+</html>

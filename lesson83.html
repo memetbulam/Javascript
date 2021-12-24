@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 83 Fonksiyonda Parametre Kavramı</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result" class="m-2"></p>
+        <p id="result2" class="m-2"></p>
+        <p id="result3" class="m-2"></p>
+        <p id="result4" class="m-2"></p>
+    </div>
+    <script>
+        // Örnek 1
+        function multi(x, y) {
+            if (y === undefined)
+                y = 1;
+            return x * y;
+        }
+        print('result', "multi(5)", multi(5));
+
+        // Örnek 2
+        function multi2(x, y = 1) {
+            return x * y;
+        }
+        print('result2', "multi(5)", multi(5));
+
+        // Örnek 3
+        function showMax() {
+            var i, Max = -Infinity;
+            for (i = 0; i < arguments.length; i++) {
+                if (arguments[i] > Max) {
+                    Max = arguments[i];
+                }
+            }
+            return Max;
+        }
+        print('result3', "showMax(5, 2, 7, 1, 0, 12)", showMax(5, 2, 7, 1, 0, 12));
+
+        // Örnek 4
+        function sumAll() {
+            var i, sum = 0;
+            for (i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        print('result4', "sumAll(5,2)", sumAll(5, 2));
+
+        function print(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + ": </b>" + process;
+        }
+    </script>
+
+</body>
+
+</html>

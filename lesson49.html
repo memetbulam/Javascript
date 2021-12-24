@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 49 Tüm Javascript Türleri</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <script>
+        // Örnek 1
+        var x;
+        document.getElementById('result').innerHTML =
+            "<b>Javascript: </b>" + typeof "Javascript" + "<br>" +
+            "<b>7: </b>" + typeof (7) + "<br>" +
+            "<b>3.14: </b>" + typeof (3.14) + "<br>" +
+            "<b>NaN: </b>" + typeof NaN + "<br>" +
+            "<b>true: </b>" + typeof true + "<br>" +
+            "<b>[0, 5, 10, 15]: </b>" + typeof [0, 5, 10, 15] + "<br>" +
+            "<b>{ name: 'Asus', ram: '8GB' }: </b>" + typeof { name: 'Asus', ram: '8GB' } + "<br>" +
+            "<b>new Date(): </b>" + typeof new Date() + "<br>" +
+            "<b>function () { }: </b>" + typeof function () { } + "<br>" +
+            "<b>null: </b>" + typeof null + "<br>" +
+            "<b>x: </b>" + typeof x;
+
+        // Örnek 2
+        document.getElementById('result2').innerHTML =
+            "<b>Javascript: </b>" + "Javascript".constructor + "<br>" +
+            "<b>7: </b>" + (7).constructor + "<br>" +
+            "<b>3.14: </b>" + (3.14).constructor + "<br>" +
+            "<b>NaN: </b>" + NaN.constructor + "<br>" +
+            "<b>true: </b>" + true.constructor + "<br>" +
+            "<b>[0, 5, 10, 15]: </b>" + [0, 5, 10, 15].constructor + "<br>" +
+            "<b>{ name: 'Asus', ram: '8GB' }: </b>" + { name: 'Asus', ram: '8GB' }.constructor + "<br>" +
+            "<b>new Date(): </b>" + new Date().constructor + "<br>" +
+            "<b>function () { }: </b>" + function () { }.constructor + "<br>";
+        // "<b>null: </b>" + null.constructor + "<br>" +
+        // "<b>x: </b>" + x.constructor;
+
+        // Örnek 3
+        var langs = [
+            "PHP",
+            "Asp.Net",
+            "JSP",
+            "coldFusion",
+            "Node JS",
+            "Java",
+            "C#",
+            "Javascript",
+            "Angular JS",
+            "React JS",
+            "Vue JS",
+            "JQUERY",
+            "MSSQL",
+            "MySQL"
+        ];
+        document.getElementById('result3').innerHTML = "<b> Array mi? </b>" + isArray(langs);
+        function isArray(langs) {
+            return langs.constructor.toString().indexOf("Array") > -1;
+        }
+
+        // Örnek 4
+        var d = new Date();
+        document.getElementById('result4').innerHTML = "<b> Tarih mi? </b>" + isDate(d);
+        function isDate(d) {
+            return d.constructor === Date;
+        }
+    </script>
+</body>
+
+</html>

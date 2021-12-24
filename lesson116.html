@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 116 classlara dışarıdan nasıl ulaşılır</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        class person {
+            static Message() {
+                return "Ecmascript 6 ile Nesne Yönelimli programlama";
+            }
+        }
+        $('#result').innerHTML = person.Message();
+    </script>
+</body>
+
+</html>

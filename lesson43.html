@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 43 For Loop Döngüsü</title>
+</head>
+
+<body>
+    <button type="button" onclick="show();">Start Loop</button>
+    <p id="result"></p>
+    <hr>
+    <button type="button" onclick="show2();">Start Loop 2</button>
+    <p id="result2"></p>
+    <hr>
+    <button type="button" onclick="show3();">Start Loop 3</button>
+    <p id="result3"></p>
+
+    <script>
+        // Örnek 1
+        // i= increment= Arttırma
+        function show() {
+            var i, text = "";
+            for (i = 1; i <= 10; i++) {
+                text += i + "<br>";
+            }
+
+            document.getElementById('result').innerHTML = text;
+        }
+
+        // Örnek 2
+        function show2() {
+            var text = "", i;
+            var langs = [
+                "PHP",
+                "Asp.Net",
+                "JSP",
+                "coldFusion",
+                "Node JS",
+                "Java",
+                "C#",
+                "Javascript",
+                "Angular JS",
+                "React JS",
+                "Vue JS",
+                "JQUERY",
+                "MSSQL",
+                "MySQL"
+            ];
+
+            // text += langs[0] + "<br>";
+            // text += langs[1] + "<br>";
+            // text += langs[2] + "<br>";
+            // text += langs[3] + "<br>";
+            // text += langs[4] + "<br>";
+            // text += langs[5] + "<br>";
+            // text += langs[6] + "<br>";
+            // text += langs[7] + "<br>";
+            // text += langs[8] + "<br>";
+            // text += langs[9] + "<br>";
+            // text += langs[10] + "<br>";
+            // text += langs[11] + "<br>";
+            // text += langs[12] + "<br>";
+            // text += langs[13];
+
+            for (i = 0; i < langs.length; i++) {
+                text += langs[i] + "<br>";
+            }
+
+            document.getElementById('result2').innerHTML = text;
+        }
+
+        // Örnek 3
+        function show3() {
+            var d, text = "";
+            for (d = 10; d >= 1; d--) {
+                text += d + "<br>";
+            }
+
+            document.getElementById('result3').innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

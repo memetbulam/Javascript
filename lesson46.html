@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 46 while ve do-while loop</title>
+</head>
+
+<body>
+    <button type="button" onclick="show();">While</button>
+    <p id="result"></p>
+    <hr>
+    <button type="button" onclick="show2();">Do-While</button>
+    <p id="result2"></p>
+    <script>
+        // Örnek 1
+        // While = Koşul sağlanırsa döngü çalışılır
+        // do-while= İlk önce çalıştırır sonra koşula bakar
+        function show() {
+            var message = "", i = 1;
+            while (i <= 10) {
+                message += "Number: " + i + "<br>";
+                i++;
+            }
+            document.getElementById('result').innerHTML = message;
+        }
+
+        // Örnek 2
+        // While = Koşul sağlanırsa döngü çalışılır
+        // do-while= İlk önce çalıştırır sonra koşula bakar
+        function show2() {
+            var message = "", i = 1;
+            do {
+                message += "Number: " + i + "<br>";
+                i++;
+            } while (i <= 10)
+
+            document.getElementById('result2').innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>

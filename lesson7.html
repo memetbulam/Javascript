@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 7 Javascript Syntax Rules Yazım Kuralları</title>
+</head>
+
+<body>
+    <h4>Sabit Değer - Literal</h4>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <h4>Değişkenler - Variable</h4>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <h4>Değişkenler - Örnek 2</h4>
+    <div id="result5"> </div>
+    <script>
+        // Sabit değer - Sabit değerlere "Literal" denir.
+        document.getElementById('result').innerHTML = 70.25 * 2;
+        // String veri
+        document.getElementById('result2').innerHTML = "70.25*2";
+
+        //Değişkenler - Variable
+        var veritutucu;
+        veritutucu = 7;
+        document.getElementById('result3').innerHTML = veritutucu;
+        veritutucu = "Javascript";
+        document.getElementById('result4').innerHTML = veritutucu;
+
+        //Değişkenler - Örnek2
+        var x, y, z;
+        x = 70;
+        y = 5;
+        z = x + y;
+        document.getElementById('result5').innerHTML = z;
+
+    </script>
+</body>
+
+</html>

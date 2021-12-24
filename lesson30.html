@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 30 Math Sabitleri ve Random (Rasgele) Sayı Üretmek</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+
+    <!--Örnek 4-->
+    <button type="button" onclick="show();">Create</button>
+    <p id="result4"></p>
+
+    <script>
+        // Örnek 1
+        document.getElementById('result').innerHTML = "<b>random(): </b>" + Math.random();
+
+        // Örnek 2
+        document.getElementById('result2').innerHTML =
+            "<b>Math.E: </b>" + Math.E
+            + "<br><b>Math.PI: </b>" + Math.PI
+            + "<br><b>Math.SQRT2: </b>" + Math.SQRT2
+            + "<br><b>Math.SQRT1_2: </b>" + Math.SQRT1_2
+            + "<br><b>Math.LN2: </b>" + Math.LN2
+            + "<br><b>Math.LN10: </b>" + Math.LN10
+            + "<br><b>Math.LOG2E: </b>" + Math.LOG2E
+            + "<br><b>Math.LOG10E: </b>" + Math.LOG10E;
+
+        // Örnek 3
+        document.getElementById('result3').innerHTML = "<b>Random Number: </b>" + Math.floor(Math.random() * 10) + 1;
+
+        //Örnek 4
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * max) + min;
+        }
+        function show() {
+            document.getElementById('result4').innerHTML = "<b>Random Number: </b>" + getRandom(1, 10);
+        }
+
+    </script>
+</body>
+
+</html>

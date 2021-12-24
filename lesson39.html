@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 39 Karşılaştırmalar ve Mantıksal Operatörler</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <hr>
+    <input type="text" id="Not" placeholder="Not Giriniz...">
+    <button type="button" onclick="notHesapla();">Hesapla</button>
+    <p id="result2"></p>
+    <hr>
+    <p id="result3"></p>
+    <script>
+        // Örnek 1
+        var x = 7;
+        document.getElementById('result').innerHTML =
+            "<b>(x == 7): </b>" + (x == 7) + "<br>" +
+            "<b>(x == '7'): </b>" + (x == "7") + "<br>" +
+            "<b>(x === '7'): </b>" + (x === "7") + "<br>" +
+            "<b>(x == 'JS'): </b>" + (x == "JS") + "<br>" +
+            "<b>(x != 7): </b>" + (x != 7) + "<br>" + "<br>" +
+            "<b>(x !== 5): </b>" + (x !== 5) + "<br>" +
+            "<b>(x > 5): </b>" + (x > 5) + "<br>" +
+            "<b>(x <= 7): </b>" + (x <= 7);
+
+        // Örnek 2
+        function notHesapla() {
+            var not = Number(document.getElementById('Not').value), message = "";
+            if (not.length == 0) {
+                document.getElementById('result2').innerHTML = "Lütfen Notunuzu Giriniz!";
+            } else {
+                if (not >= 50) {
+                    message = "Başarılı";
+                } else {
+                    message = "Başarısız!";
+                }
+                document.getElementById('result2').innerHTML = message;
+            }
+        }
+
+        // Örnek 3
+        var x = 7, y = 10;
+        document.getElementById('result3').innerHTML =
+            "<b>(x < 10 && y > 5): </b>" + (x < 10 && y > 5) + "<br>" +
+            "<b>(x == 7 || y == 5): </b>" + (x == 7 || y == 5) + "<br>" +
+            "<b>!(x == 7): </b>" + !(x == 7);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 52 Bit Düzeyinde AND İşlemi</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+
+    <script>
+        // &
+        show('result', "0 & 0", 0 & 0);
+        show('result1', "1 & 0", 1 & 0);
+        show('result2', "0 & 1", 0 & 1);
+        show('result3', "1 & 1", 1 & 1);
+        // 1111 & 0000
+        show('result4', "15 & 0", 15 & 0);
+        // 1111 & 0001
+        show('result5', "15 & 1", 15 & 1);
+        // 1111 & 0010
+        show('result6', "15 & 2", 15 & 2);
+        // 1111 & 0100
+        show('result7', "15 & 4", 15 & 4);
+
+        function show(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + ": </b>" + process;
+        }
+    </script>
+</body>
+
+</html>

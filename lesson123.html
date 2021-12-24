@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 123 Ecmascript 6 Map ve WeakMap Nesnelerinin Kullanımı</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        let m = new Map();
+        m.set("message", "Javascript Ecmascript 6");
+        m.set("show", "Map and WeakMap");
+
+        $('#result').innerHTML =
+            "<b>Var mı? </b>" + m.has("message") +
+            "<br><b>Value: </b>" + m.get("show");
+
+        // $('#result').innerHTML += "<br><b>Sil: </b>" + m.delete("message");
+        $('#result').innerHTML += "<br><b>Value: </b>" + m.get("message");
+
+        console.log(m.keys());
+        console.log(m.values());
+
+        m.clear();
+        $('#result').innerHTML += "<br><b>Value: </b>" + m.get("message");
+        $('#result').innerHTML += "<br><b>Value: </b>" + m.get("show");
+        console.log(m.keys());
+        console.log(m.values());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 35 Array Metodları</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <hr>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <hr>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <hr>
+    <p id="result7"></p>
+    <p id="result8"></p>
+    <p id="result9"></p>
+    <p id="result10"></p>
+    <hr>
+    <p id="result11"></p>
+    <hr>
+    <p id="result12"></p>
+    <p id="result13"></p>
+    <hr>
+    <p id="result14"></p>
+
+    <script>
+        var langs = ["PHP", "Asp.Net", "JSP", "NodeJS", "Javascript", "Angular JS", "React JS", "Vue JS", "HTML5", "CSS3"];
+
+        // Örnek 1
+        // İlk başa ekledik
+        document.getElementById('result').innerHTML = "<b>Normal: </b>" + langs;
+        // langs.unshift("Java");
+        document.getElementById('result2').innerHTML = "<b>unshift(): </b>" + langs;
+
+        // Örnek 2
+        // Değiştirme
+        document.getElementById('result3').innerHTML = "<b>Normal: </b>" + langs;
+        langs[3] = "C#";
+        document.getElementById('result4').innerHTML = "<b>langs[3]: </b>" + langs;
+
+        // Örnek 3
+        // Silme
+        document.getElementById('result5').innerHTML = "<b>Normal: </b>" + langs;
+        delete langs[7];
+        document.getElementById('result6').innerHTML = "<b>Delete: </b>" + langs;
+
+        // Örnek 4
+        // ekleme - kaldırma
+        document.getElementById('result7').innerHTML = "<b>Normal: </b>" + langs;
+        langs.splice(2, 0, "C++");
+        document.getElementById('result8').innerHTML = "<b>splice(): </b>" + langs;
+
+        //0'dan sonra 2 eleman kaldırır
+        document.getElementById('result9').innerHTML = "<b>Normal: </b>" + langs;
+        var x = langs.splice(0, 2);
+        document.getElementById('result10').innerHTML = "<b>splice(): </b>" + langs;
+
+        // Örnek 5
+        // Birleştirme
+        var langs1 = ["PHP", "Asp.Net", "JSP", "NodeJS", "Javascript", "Angular JS", "React JS", "Vue JS", "HTML5", "CSS3"];
+        var langs2 = ["PHP", "Asp.Net", "JSP", "NodeJS", "Javascript"];
+        var langs3 = ["PHP", "Asp.Net"];
+        var langsConcat = langs1.concat(langs2, langs3);
+
+        document.getElementById('result11').innerHTML = langsConcat;
+
+        // Örnek 6
+        // bölme
+        var langs = ["PHP", "Asp.Net", "JSP", "NodeJS", "Javascript", "Angular JS", "React JS", "Vue JS", "HTML5", "CSS3"];
+
+        document.getElementById('result12').innerHTML = "<b>Normal: </b>" + langs;
+        var newLangs = langs.slice(1, 4);
+        document.getElementById('result13').innerHTML = "<b>slice(): </b>" + newLangs;
+    </script>
+</body>
+
+</html>

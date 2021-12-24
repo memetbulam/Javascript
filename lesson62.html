@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 62 Use Strict</title>
+</head>
+
+<body>
+    <button type="button" onclick="ornek1()">Örnek 1</button>
+    <p id="result"></p>
+    <button type="button" onclick="ornek2()">Örnek 2</button>
+    <p id="result2"></p>
+    <button type="button" onclick="ornek3()">Örnek 3</button>
+    <p id="result3"></p>
+    <button type="button" onclick="ornek4()">Örnek 4</button>
+    <p id="result4"></p>
+    <button type="button" onclick="ornek5()">Örnek 5</button>
+    <p id="result5"></p>
+
+    <script>
+        function ornek1() {
+            "use strict"
+            x = 5;
+            document.getElementById('result').innerHTML = x;
+        }
+
+        function ornek2() {
+            y = 5;
+            document.getElementById('result2').innerHTML = y;
+        }
+
+        function ornek3() {
+            "use strict"
+            z = { p1: "Javascript", p2: 10 };
+            document.getElementById('result3').innerHTML = z;
+        }
+
+        function ornek4() {
+            var a = "Javascript";
+            delete a;
+            document.getElementById('result4').innerHTML = a;
+        }
+
+        function ornek5() {
+            "use strict"
+           var b = "Javascriptt";
+            delete b;
+            document.getElementById('result5').innerHTML = b;
+        }
+
+    </script>
+</body>
+
+</html>

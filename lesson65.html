@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 65 Performans</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+
+    <script>
+
+        // Yavaş döngü
+        /*var num = [24, 100, 45, 7, 57];
+        for (var i = 0; i < num.length; i++) {
+            document.getElementById('result').innerHTML += num[i] + "<br>";
+        }*/
+
+        // Hızlı döngü
+        var num = [24, 100, 45, 7, 57];
+        var i = 0;
+        var len = num.length;
+        var result = document.getElementById('result');
+
+        for (; i < len; i++) {
+            result.innerHTML += num[i] + "<br>";
+        }
+
+        // Yavaş
+        /*var firstName = "Ahmet", lastName = "HELVACI", fullName;
+        var result2 = document.getElementById('result2');
+        fullName = firstName + " " + lastName;
+        result2.innerHTML = fullName;*/
+
+        // Hızlı
+        var firstName = "Ahmet", lastName = "HELVACI";
+        var result2 = document.getElementById('result2');
+        result2.innerHTML = firstName + " " + lastName;
+
+    </script>
+</body>
+
+</html>

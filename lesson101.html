@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 101 Gizle Göster Uygulaması</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <button type="button" class="btn btn-dark mb-3" onclick="javascript:hideShow()">Göster / Gizle</button>
+        <p><img src="img/bulbon.png" alt="" width="120" height="120" id="picture"></p>
+    </div>
+    <script>
+        function hideShow() {
+            var getElement = document.querySelector('#picture');
+            if (getElement.style.display == "none") {
+                getElement.style.display = "block";
+            } else {
+                getElement.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

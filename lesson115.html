@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 115 get, set, super metodları ile inheritance</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result" class="mb-5"></p>
+        <p id="result2" class="mb-5"></p>
+        <p id="result3" class="mb-5"></p>
+        <p id="result4"></p>
+    </div>
+    <script>
+        // "use strict";
+        class person {
+            constructor(p1, p2, p3) {
+                this.Name = p1;
+                this.age = p2;
+                this.weight = p3;
+            }
+            get firstName() {
+                return this.Name;
+            }
+            get Age() {
+                return this.age;
+            }
+            get Weight() {
+                return this.weight;
+            }
+
+            set firstName(x) {
+                this.Name = x;
+            }
+            set Age(age) {
+                this.age = age;
+            }
+            set Weight(weight) {
+                this.weight = weight;
+            }
+            Message() {
+                return "Ecmascript 6 ile Nesne Yönelimli programlama";
+            }
+        }
+
+        // Miras al
+        class Engineer extends person {
+            constructor(p1, p2, p3, p4) {
+                super(p1, p2, p3);
+                this.lastName = p4;
+            }
+            get lastN() {
+                return this.lastName;
+            }
+            set lastN(last) {
+                this.lastName = last;
+            }
+            MessageAlert() {
+                let msg = this.Message();
+                alert(msg);
+                return msg;
+            }
+        }
+
+        var myObject = new Engineer("Ahmet", 30, 80);
+        $('#result').innerHTML = myObject.firstName + "<br>" + myObject.Age + "<br>" + myObject.Weight;
+
+        $('#result2').innerHTML = (myObject.firstName = "Mehmet") + "<br>" + (myObject.Age = 24) + "<br>";
+        // $('#result2').innerHTML += + "<br>";
+        $('#result2').innerHTML += (myObject.Weight = 83) + "<br>";
+        $('#result2').innerHTML += (myObject.lastN = "BULAM") + "<br>";
+        $('#result2').innerHTML += myObject.MessageAlert();
+    </script>
+</body>
+
+</html>

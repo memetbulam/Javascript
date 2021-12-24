@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 125 Ecmascript 6 Promise Nesnesi</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        // Örnek 1
+        // let result = true;
+        // let show = function (success, reject) {
+        //     if (result) {
+        //         success("İşlem Başarılı!");
+        //     } else {
+        //         reject("İşlem Başarısız!");
+        //     }
+        // }
+        // show(success, reject);
+        // function success(par) {
+        //     $("#result").innerHTML = par;
+        // }
+        // function reject(par) {
+        //     $("#result").innerHTML = par;
+        // }
+
+        // Örnek 2
+        // let result = false;
+        // const PI = 3.14;
+        // let x = 4;
+        // let show = function (success, reject) {
+        //     if (result) {
+        //         success();
+        //     } else {
+        //         reject();
+        //     }
+        // }
+        // show(success, reject);
+        // function success() {
+        //     $("#result").innerHTML = PI * x;
+        // }
+        // function reject() {
+        //     $("#result").innerHTML = x * x;
+        // }
+
+        // Örnek 3
+        // Promise
+        // let result = false;
+        // const PI = 3.14;
+        // let x = 4;
+        // let show = new Promise(function (success, reject) {
+        //     if (result) {
+        //         success("İşlem Başarılı!");
+        //     } else {
+        //         reject("İşlem Başarısız!");
+        //     }
+        // });
+        // show.then(function success(par) {
+        //     $("#result").innerHTML = PI * x;
+        // }).catch(function reject(par) {
+        //     $("#result").innerHTML = x * x;
+        // });
+
+        // Örnek 4
+        // Promise
+        let show1 = new Promise(function (success, reject) {
+            setTimeout(function () {
+                success("İşlem Başarılı!");
+            }, 1000);
+        });
+        let show2 = new Promise(function (success, reject) {
+            setTimeout(function () {
+                reject("İşlem Başarısız!");
+            }, 2000);
+        });
+        Promise.race([show1, show2]).then(function success(par) {
+            $("#result").innerHTML = par;
+        }).catch(function reject(par) {
+            $("#result").innerHTML = par;
+        });
+    </script>
+</body>
+
+</html>

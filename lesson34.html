@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 34 Array Özellik ve Metodları</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <hr>
+    <p id="result6"></p>
+    <p id="result7"></p>
+    <hr>
+    <p id="result8"></p>
+    <p id="result9"></p>
+    <hr>
+    <p id="result10"></p>
+    <p id="result11"></p>
+    <hr>
+
+    <script>
+        var langs = ["PHP", "Asp.Net", "JSP", "NodeJS", "Javascript", "Angular JS", "React JS", "Vue JS", "HTML5", "CSS3"];
+
+        // Örnek 1
+        // Undefined
+        langs[12] = "MySQL";
+        var text, i;
+        text = "";
+        for (i = 0; i < langs.length; i++) {
+            text += langs[i] + "<br>";
+        }
+        document.getElementById('result').innerHTML = text;
+
+        // Örnek 2
+        document.getElementById('result2').innerHTML = "<b>Array mi? </b>" + Array.isArray(langs);
+        document.getElementById('result3').innerHTML = "<b>Array örneği mi? </b>" + (langs instanceof Array);
+
+        document.getElementById('result4').innerHTML = "<b>Array mi? </b>" + isArray(langs);
+        function isArray(isHave) {
+            return isHave.constructor.toString().indexOf("Array") > -1;
+        }
+
+        // Örnek 3
+        document.getElementById('result5').innerHTML = "<b>langs.join: </b>" + langs.join("---");
+
+        // Örnek 4
+        // Çıkarılan değeri döndürür
+        // En sonu çıkarır
+        document.getElementById('result6').innerHTML = "<b>Normal: </b>" + langs;
+        langs.pop();
+        document.getElementById('result7').innerHTML = "<b>pop(): </b>" + langs;
+
+        // Örnek 5
+        // push: Array uzunluğunu döndürür
+        // En sona ekler
+        document.getElementById('result8').innerHTML = "<b>Normal: </b>" + langs;
+        langs.push("ColdFusion");
+        document.getElementById('result9').innerHTML = "<b>push(): </b>" + langs;
+
+        // Örnek 6
+        // Çıkarılan değeri döndürür
+        // İlk başta çıkarttık
+        document.getElementById('result10').innerHTML = "<b>Normal: </b>" + langs;
+        langs.shift();
+        document.getElementById('result11').innerHTML = "<b>shift(): </b>" + langs;
+
+    </script>
+</body>
+
+</html>

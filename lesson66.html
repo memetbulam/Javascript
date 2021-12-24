@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 66 Butona tıklandığında ya da sayfa yüklendiğinde harici javascript dosyasını yükleme</title>
+    <!-- <script src="JS/lesson66.js"></script> -->
+</head>
+
+<body>
+    <button type="button" id="externalJS">Call JS</button>
+    <p id="result"></p>
+
+    <script>
+        var getJS = document.getElementById('externalJS');
+
+        getJS.onclick = function () {
+            var scriptCreate = document.createElement("script");
+            scriptCreate.src = "JS/lesson66.js";
+            document.getElementsByTagName("head")[0].appendChild(scriptCreate);
+        }
+
+
+        // window.onload = function () {
+        //     var getElement = document.createElement("script");
+        //     getElement.src = "JS/lesson66.js";
+        //     document.body.appendChild(getElement);
+        // }
+    </script>
+    <!-- <script src="JS/lesson66.js"></script> -->
+</body>
+
+</html>

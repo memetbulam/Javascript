@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 12 Operatörler</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+    <script>
+        var x, y, z, sum, sub, multi, div, mod, txt1, txtresult;
+        x = 10;
+        y = 5;
+        sum = x + y;
+        sub = x - y;
+        multi = x * y;
+        div = x / y;
+        mod = x % y;
+        // "z=y--;" İlk önce y'nin değerini z ata daha sonra eksilt
+        // "z=--y;" İlk önce y'nin değerini azalt daha sonra z değişkenine ata
+        y++;
+        x += 5; // x= x+5;
+        x -= 5; // x=x-5;
+        x *= y; // x= x*y;
+        x %= y; // x= x%y;
+        txt1 = "JQUERY";
+        txt1 += ", Javascript'te en çok kullanılan kütüphanedir.";
+        //txtresult = txt1 + "," + txt2;
+        document.getElementById('result').innerHTML = sum + " " + sub + " " + multi + " " + div + " " + mod + "<br> Y Değeri: " + y;
+        document.getElementById('result2').innerHTML = "<br> Y yeni Değeri: " + y;
+        document.getElementById('result3').innerHTML = "Y yeni Değeri: " + y;
+        document.getElementById('result4').innerHTML = "<br>" + x + "<br>" + txt1;
+
+        // "===" hem tür hem değer eşit olması gerek
+        // "!=" eşit değildir.
+        if (x === y) {
+            document.getElementById('result5').innerHTML = "Koşul Sağlandı.";
+        }
+        document.getElementById('result5').innerHTML = "Koşul Sağlanmadı.";
+
+    </script>
+</body>
+
+</html>

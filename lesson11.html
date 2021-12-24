@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 11 Variables (Değişkenler)</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        // "=" atama operatörüdür
+        // "==" eşittir.
+        Print();
+        function Print() {
+            var firstName, lastName, age = 9, userName, x, sum, y;
+            age = age + 11;
+            firstName = "Javascript";
+            userName = 10;
+            x = 7;
+            sum = (x + userName) * x;
+            y = '\"Node JS\" ile Javascript sunucuya "taşındı"';
+            document.getElementById('result').innerHTML = firstName + " " + age + " " + sum + " " + "Tırnak işareti: " + y;
+        }
+    </script>
+</body>
+
+</html>

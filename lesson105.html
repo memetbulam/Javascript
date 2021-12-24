@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 105 Karakter Sınırlama Uygulaması</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <form>
+            <div class="form-group">
+                <textarea id="message" name="message" class="form-control"></textarea>
+                <p id="result" class="badge badge-dark p-2 mt-3"></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var message, result, chracter = 50, chracterLength;
+        message = document.querySelector('#message');
+        result = document.querySelector('#result');
+        message.onkeydown = chracterControl;
+        // message.onkeyup = chracterControl;
+        function chracterControl() {
+            chracterLength = this.value.length;
+            if (chracter >= chracterLength) {
+                var lastLength = chracter - chracterLength;
+                result.textContent = lastLength + " karakter kaldı";
+            } else {
+                // this.value = this.value.substr(0, chracter);
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

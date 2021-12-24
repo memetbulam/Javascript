@@ -1,0 +1,22 @@
+<writers>
+    <writer>
+        <firstName>Ahmet</firstName>
+        <lastName>HELVACI</lastName>
+        <age>25</age>
+    </writer>
+    <writer>
+        <firstName>Mehmet</firstName>
+        <lastName>BULAM</lastName>
+        <age>26</age>
+    </writer>
+    <writer>
+        <firstName>Burak</firstName>
+        <lastName>ARIKAN</lastName>
+        <age>40</age>
+    </writer>
+    <writer>
+        <firstName>Ali</firstName>
+        <lastName>SAVAŞ</lastName>
+        <age>38</age>
+    </writer>
+</writers>

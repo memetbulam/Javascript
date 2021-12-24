@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 107 Butona tıklandığında değişen arka plan algoritması</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .color {
+            border: 2px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+    <div id="result" class="color"></div>
+    </p>
+    <button type="button" id="Btn" class="btn btn-dark">Change BackGround Color</button>
+
+    <dl class="mt-5">
+        <dt>Sıralama</dt>
+        <dd>Mavi, Yeşil, Mavi, Yeşil, Mavi, Yeşil, Mavi, Yeşil</dd>
+    </dl>
+    <script>
+        var Btn, result, count = 0;
+        Btn = document.querySelector('#Btn');
+        result = document.querySelector('#result');
+        Btn.addEventListener('click', function () {
+            if (count % 2 === 0) {
+                result.style.backgroundColor = "Blue";
+            } else {
+                result.style.backgroundColor = "green";
+            }
+            count++;
+        });
+    </script>
+</body>
+
+</html>

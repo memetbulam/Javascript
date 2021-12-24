@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 122 Ecmascript 6 Set Nesnesi Kullanımı</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        let dataSet = new Set();
+        dataSet.add("Javascript");
+        dataSet.add("Ecmascript 6");
+        dataSet.add("JQUERY");
+        dataSet.add("Vue JS");
+        dataSet.add("Node JS");
+        dataSet.add("React JS");
+        dataSet.add("Hoşgeldiniz");
+        $('#result').innerHTML =
+            "<b>Var mı? </b>" + dataSet.has("Javascript") +
+            "<br><b>Size: </b>" + dataSet.size +
+            "<br><b>Sil: </b>" + dataSet.delete("Hoşgeldiniz");
+
+        $('#result').innerHTML += "<br><b>Size: </b>" + dataSet.size;
+
+        dataSet.clear();
+
+        $('#result').innerHTML += "<br><b>Size: </b>" + dataSet.size;
+    </script>
+</body>
+
+</html>

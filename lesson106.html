@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 106 Javascript ile TC Kimlik Numarası Kontrolü</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <form>
+            <div class="form-group">
+                <label for="tc">TC NO</label>
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" id="tc" name="tc" class="form-control">
+                    </div>
+                    <button type="button" id="Btn" class="btn btn-dark">Control</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <p id="resultFalse" class="alert alert-danger" style="display: none;"></p>
+                    <p id="resultTrue" class="alert alert-success" style="display: none;"></p>
+                </div>
+            </div>
+
+        </form>
+
+        <dl>
+            <dt>Tc Kimlik No Kuralları</dt>
+            <dd>- 11 haneli rakamlardan oluşmalıdır.</dd>
+            <dd>- İlk rakam '0' olamaz.</dd>
+            <dd>- 1,3,5,7 ve 9. hanelerin toplamının 7 katı ile 2,4,6 ve 8 hanelerin toplamı çıkartılır, sonucun
+                10'a bölümünden kalanı 10. haneye verir.</dd>
+            <dd>- İlk 10 hanenin toplamının 10'a bölümünden kalan, son haneyi verir.</dd>
+            <dt>Örnek;</dt>
+            <dd>- Doğru: 13510356734</dd>
+            <dd>- Yanlış: </dd>
+        </dl>
+    </div>
+
+    <script>
+        var Id, Btn, resultFalse, resultTrue, result, i, j, z;
+        Id = document.querySelector('#tc');
+        resultFalse = document.querySelector('#resultFalse');
+        resultTrue = document.querySelector('#resultTrue');
+        Btn = document.querySelector('#Btn');
+
+        Btn.addEventListener('click', function () {
+            var odd = 0, even = 0, tcTotal = 0;
+            for (i = 0; i < 9; i += 2) {
+                odd += Number(Id.value[i]);
+            }
+            odd *= 7;
+            for (j = 1; j < 8; j += 2) {
+                even += Number(Id.value[j]);
+            }
+            result = Math.abs(odd - even);
+            for (z = 0; z < 10; z++) {
+                tcTotal += Number(Id.value[z]);
+            }
+            resultFalse.style.display = "block";
+            resultTrue.style.display = "none";
+            if (Id.value == "") {
+                resultFalse.textContent = "Kimlik numarası boş bırakılamaz!";
+            } else if (isNaN(Id.value)) {
+                resultFalse.textContent = "Lütfen 11 haneli sayı giriniz!";
+            } else if (Id.value.length !== 11) {
+                resultFalse.textContent = "Kimlik numarası 11 haneli olmalıdır!";
+            } else if (Id.value[0] == 0) {
+                resultFalse.textContent = "Kimlik numarasının ilk rakamı sıfır olamaz!";
+            } else if (result % 10 != Number(Id.value[9])) {
+                resultFalse.textContent = "Girilen kimlik numarası gerçek bir şahsa ait değildir!";
+            } else if (tcTotal % 10 != Number(Id.value[10])) {
+                resultFalse.textContent = "Girilen kimlik numarası gerçek bir şahsa ait değildir!";
+            } else {
+                resultFalse.style.display = "none";
+                resultTrue.style.display = "block";
+                resultTrue.textContent = "Girilen kimlik numarası doğru!";
+            }
+        });
+    </script>
+</body>
+
+</html>

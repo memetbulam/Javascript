@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 94 EventListener</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <div id="result" class="alert alert-success">Javascript ile EventListener</div>
+        <button type="button" id="Btn" class="btn btn-dark">Click</button>
+    </div>
+    <script>
+        // Örnek 1
+        // Birden fazla olay atama
+        // var Btn = document.querySelector('#Btn');
+        // var result = document.querySelector('#result');
+        // Btn.addEventListener("click", showDate);
+        // function showDate() {
+        //     result.innerHTML = Date();
+        // }
+
+        // Örnek 2
+        // var Btn = document.querySelector('#Btn');
+        // var result = document.querySelector('#result');
+        // Btn.addEventListener("click", mClick);
+        // Btn.addEventListener("click", mOtherClick);
+        // function mClick() {
+        //     alert("İlk click olayı");
+        // }
+        // function mOtherClick() {
+        //     alert("İkinci click olayı");
+        // }
+
+        // Örnek 3
+        var Btn = document.querySelector('#Btn');
+        var result = document.querySelector('#result');
+        Btn.addEventListener("click", mClick);
+        Btn.addEventListener("mouseover", mOver);
+        Btn.addEventListener("mouseout", mOut);
+        function mClick() {
+            result.innerHTML = "click: Butonun üzerine Tıkladın!";
+        }
+        function mOver() {
+            result.innerHTML = "mouseover: Butonun üzerine geldin!";
+        }
+        function mOut() {
+            result.innerHTML = "mouseout: Butonun üzerinden çektin!";
+        }
+    </script>
+</body>
+
+</html>

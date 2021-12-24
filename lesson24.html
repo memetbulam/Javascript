@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 24 String Metodları (Bölüm 2)</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+    <p id="result8"></p>
+    <p id="result9"></p>
+    <p id="result10"></p>
+    <p id="result11"></p>
+
+    <script>
+        var text = "Javascript, Angular JS, React JS, Vue JS, Node JS ";
+        // Bütün "JS"leri değiştirir.
+        document.getElementById('result').innerHTML = "<b>replace(Tümü):</b> " + text.replace(/JS/g, "<b>Değişti</b>");
+        //Büyük küçük harfe duyarlı değil
+        document.getElementById('result2').innerHTML = "<b>replace(B.K. harf Duyarlı Değil):</b> " + text.replace(/Js/i, "<b>Değişti</b>");
+        // Büyük-Küçük harf duyarlı değil ve belirtilen tüm harfleri seçer
+        document.getElementById('result3').innerHTML = "<b>replace(B.K. harf Duyarlı Değil ve Tümü):</b> " + text.replace(/Js/gi, "<b>Değişti</b>");
+
+        document.getElementById('result4').innerHTML = "<b>toUpperCase: </b> " + text.toUpperCase();
+        document.getElementById('result5').innerHTML = "<b>toLowerCase: </b> " + text.toLowerCase();
+        //İki stringi birleştirir
+
+        var text2 = "text2 String";
+        document.getElementById('result6').innerHTML = "<b>concat(Birleştirme): </b> " + text.concat(text2);
+        //index
+        document.getElementById('result7').innerHTML = "<b>charAt: </b> " + text.charAt(5);
+        // unicode = universel + code
+        document.getElementById('result8').innerHTML = "<b>charCodeAt: </b> " + text.charCodeAt(5);
+
+        var arrayList = text.split(",");
+        document.getElementById('result9').innerHTML = "<b>split: </b> " + arrayList[2];
+        // Split Örnek 2
+        var text3 = "13.11.2018";
+        var arrayDate = text3.split(".");
+        if (arrayDate[1] == 11) {
+            document.getElementById('result10').innerHTML = "<b>split Örnek 2: </b> " + arrayDate[0] + " Kasım " + arrayDate[2];
+        }
+    </script>
+</body>
+
+</html>

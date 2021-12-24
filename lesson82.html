@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 82 Fonksiyonlar (Detaylı Anlatım)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <!--Örnek 1-->
+        <p id="result" class="m-2"></p>
+        <!--Örnek 2-->
+        <button type="button" class="btn btn-dark m-2" onclick="message()">Call Function</button>
+        <!--Örnek 3-->
+        <p id="result2" class="m-2"></p>
+        <p id="result3" class="m-2"></p>
+        <p id="result4" class="m-2"></p>
+        <p id="result5" class="m-2"></p>
+        <p id="result6" class="m-2"></p>
+        <p id="result7" class="m-2"></p>
+    </div>
+    <script>
+        // Örnek 1
+        var multi = function (x, y) {
+            return x * y;
+        }
+        print('result', "6 * 5:", multi(6, 5));
+
+        // Örnek 2
+        function message() {
+            alert("Mesaj");
+        }
+
+        // Örnek 3
+        function multi2(x, y) {
+            return x * y;
+        }
+        function process(x, y, z) {
+            return multi2(x, y) + z;
+        }
+        print('result2', "6 * 5 + 2:", process(6, 5, 2));
+
+        // Örnek 4
+        var multi3 = new Function("x", "y", "return x*y");
+        print('result3', "new Function():", multi3(5, 5));
+
+        // Örnek 5
+        (function () {
+            print('result4', "Kendimi Çağırma", "");
+        })();
+
+        // Örnek 6
+        function person(first, last, age, color) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = color;
+            this.fullName = function () {
+                return this.firstName + " " + this.lastName;
+            }
+            this.changeName = function (name) {
+                return this.firstName = name;
+            }
+        }
+        var people = new person("Ahmet", "HELVACI", 30, "Brown");
+        people.changeName("Mehmet");
+        print('result5', "people.firstName(Change):", people.firstName);
+
+        // Örnek 7
+        // Parametre sayısı
+        function multi4() {
+            return arguments.length;
+        }
+        print('result6', "arguments.length:", multi4(5, 5, 5));
+
+        // Örnek 8
+        function multi5(x, y, z) {
+            return x * y * z;
+        }
+        print('result7', "multi5.toString():", multi5.toString());
+
+        function print(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + " </b>" + process;
+        }
+    </script>
+
+</body>
+
+</html>

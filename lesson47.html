@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 47 Break, Continue ve Label Kullanımı</title>
+</head>
+
+<body>
+    <input type="text" id="take">
+    <button type="button" onclick="show()">Göster</button>
+    <p id="result"></p>
+    <hr>
+    <button type="button" onclick="show2()">Göster</button>
+    <p id="result2"></p>
+    <hr>
+    <button type="button" onclick="show3()">Göster</button>
+    <p id="result3"></p>
+    <hr>
+    <button type="button" onclick="show4()">Göster</button>
+    <p id="result4"></p>
+    <hr>
+    <button type="button" onclick="show5()">Göster</button>
+    <p id="result5"></p>
+
+    <script>
+        // Örnek 1
+        function show() {
+            var takeValue = document.getElementById('take').value;
+            var message = "";
+            var day = new Date().getDay();
+            switch (day) {
+                case 0: day = "Pazartesi"; break;
+                case 1: day = "Salı"; break;
+                case 2: day = "Çarşamba"; break;
+                case 3: day = "Perşembe"; break;
+                case 4: day = "Cuma"; break;
+                case 5: day = "Cumartesi"; break;
+                case 6: day = "Pazar"; break;
+                default: day = "Böyle bir gün yok";
+            }
+            switch (takeValue) {
+                case "JS": message = "Tebrikler. Bu eğitim setini bildiniz"; break;
+                case "Bugün": message = day; break;
+                default: message = "Girdiğiniz harflerin hiç bir anlamı yok";
+            }
+            document.getElementById('result').innerHTML = message;
+        }
+
+        // Örnek 2
+        function show2() {
+            var text = "";
+
+            for (i = 0; i < 10; i++) {
+                if (i == 5) {
+                    break;
+                }
+                text += "Sayı: " + i + "<br>";
+            }
+            document.getElementById('result2').innerHTML = text;
+        }
+
+        // Örnek 3
+        function show3() {
+            var text = "";
+
+            for (i = 0; i < 10; i++) {
+                if (i == 5) {
+                    continue;
+                }
+                text += "Sayı: " + i + "<br>";
+            }
+            document.getElementById('result3').innerHTML = text;
+        }
+
+        // Örnek 4
+        // Çift Sayılar
+        function show4() {
+            var text = "";
+
+            for (i = 0; i < 10; i++) {
+                if ((i % 2) == 0) {
+                    continue;
+                }
+                text += "Sayı: " + i + "<br>";
+            }
+            document.getElementById('result4').innerHTML = text;
+        }
+
+        // Örnek 5
+        function show5() {
+            var langs = [
+                "PHP",
+                "Asp.Net",
+                "JSP",
+                "coldFusion",
+                "Node JS",
+                "Java",
+                "C#",
+                "Javascript",
+                "Angular JS",
+                "React JS",
+                "Vue JS",
+                "JQUERY",
+                "MSSQL",
+                "MySQL"
+            ];
+            var text = "";
+            list: {
+                text += langs[0] + "<br>";
+                text += langs[1] + "<br>";
+                text += langs[2] + "<br>";
+                text += langs[3] + "<br>";
+                text += langs[4] + "<br>";
+                text += langs[5] + "<br>";
+                text += langs[6] + "<br>";
+                break list;
+                text += langs[7] + "<br>";
+                text += langs[8] + "<br>";
+                text += langs[9] + "<br>";
+                text += langs[10] + "<br>";
+                text += langs[11] + "<br>";
+                text += langs[12] + "<br>";
+                text += langs[13] + "<br>";
+            }
+            document.getElementById('result5').innerHTML = text;
+        }
+
+    </script>
+</body>
+
+</html>

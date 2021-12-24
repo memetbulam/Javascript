@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 69 Window Nesnesi</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <p id="result"></p>
+    <hr>
+    <button type="button" class="btn btn-dark" onclick="openWindow()">Open Window</button>
+    <button type="button" class="btn btn-dark" onclick="resizeWindow()">Resize Window</button>
+    <button type="button" class="btn btn-dark" onclick="moveWindow()">Move Window</button>
+    <button type="button" class="btn btn-dark" onclick="closeWindow()">Close Window</button>
+    <p id="result2" class="alert-dark text-white"></p>
+    <script>
+        // Örnek 1
+        var w, h, result;
+        w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        result = window.document.getElementById('result');
+        result.innerHTML = "<b> Browser Width: </b>" + w + "<br><b>Browser Height: </b>" + h;
+
+        // Örnek 2
+        var result2, newWindow;
+        result2 = document.getElementById('result2');
+
+        function openWindow() {
+            // URL - NESNE - GENİŞLİK/YÜKSEKLİK
+            newWindow = window.open("", "newWindow", "width=600,height=400");
+            newWindow.document.write("Bu pencere Javascript tarafından açıldı");
+        }
+
+        function resizeWindow() {
+            newWindow.resizeTo(1280, 1024);
+        }
+
+        function moveWindow() {
+            newWindow.moveTo(1000, 250);
+        }
+
+        function closeWindow() {
+            newWindow.close();
+        }
+    </script>
+</body>
+
+</html>

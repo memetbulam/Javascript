@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 87 HTML DOM ile HTML Elemanlarını Bulma</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <h2>Yazılım Dilleri</h2>
+        <span>Sunucu ve istemci tabanlı dilleri</span>
+        <p id="result">Javascript</p>
+        <p name="resultName">JQUERY</p>
+        <p name="resultName">Angular JS</p>
+        <p name="resultName">React JS</p>
+        <p name="resultName">Vue JS</p>
+        <p id="result2">Node JS</p>
+        <p class="color">PHP</p>
+        <p class="color">ASP.NET</p>
+        <p class="color">JSP</p>
+        <p class="color1">ColdFusion</p>
+        <span class="color1">Hayatta en kıymetli hediye zamandır. Kime hediye ettiğinize dikkat edin</span>
+        <h5>MYSQL</h5>
+        <h5>MSSQL</h5>
+        <h5>ORACLE</h5>
+    </div>
+    <script>
+        // Örnek 1
+        var findElement = document.getElementById('result');
+        alert(findElement.innerText);
+
+        // Örnek 2
+        var findElement2 = document.getElementsByName('resultName');
+        var message = "", i;
+        for (i = 0; i < findElement2.length; i++) {
+            message += findElement2[i].innerHTML + "\n";
+        }
+        alert(message);
+
+        // Örnek 3
+        var findElement3 = document.getElementsByTagName('p');
+        var message2 = "", j;
+        for (j = 0; j < findElement3.length; j++) {
+            message2 += findElement3[j].innerHTML + "\n";
+        }
+        alert(message2);
+
+        // Örnek 4
+        var findElement4 = document.getElementsByClassName('color');
+        alert(findElement4[0].innerText);
+
+        // Örnek 5
+        // Hepsine ulaşılabilir
+        var findElement5 = document.querySelectorAll('.color');
+        alert(findElement5[0].innerText);
+
+        // Örnek 6
+        var findElement6 = document.querySelector('#result2');
+        alert(findElement6.innerText);
+
+        // Örnek 7
+        var findElement7 = document.querySelector('span.color1');
+        alert(findElement7.innerText);
+
+        // Örnek 8
+        var findElement8 = document.querySelectorAll('[name]');
+        alert(findElement8[0].innerText);
+    </script>
+
+</body>
+
+</html>

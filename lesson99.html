@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 99 Düğümler Arası Gezinme</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <h3 id="head3">Div dışında</h3>
+    <div class="container m-3" id="DivParent">
+        <h1 id="head" ajax="open">JAVASCRİPT</h1>
+        <p id="p1">Angular JS</p>
+        <p id="p2">React JS</p>
+        <p id="p3">Vue JS</p>
+        <p id="p4">Node JS</p>
+        <p id="p5">PHP</p>
+        <p id="p6">Asp.NET</p>
+        <p id="p7">JSP</p>
+        <span id="p8">ColdFusion</span>
+    </div>
+    <script>
+        var elementNodes = document.querySelector('#DivParent').parentNode.nodeName;
+        alert(elementNodes);
+
+        var elementNodes2 = document.querySelector('#head3').parentNode.nodeName;
+        alert(elementNodes2);
+
+        var elementNodes3 = document.querySelector('#p4').parentNode;
+        elementNodes3.style.color = "red";
+        elementNodes3.style.padding = "40px";
+        elementNodes3.style.backgroundColor = "yellow";
+        elementNodes3.style.textAlign = "center";
+
+        var elementNodes4 = document.querySelector('#DivParent').children.length;
+        alert(elementNodes4);
+
+        var elementNodes5 = document.querySelector('#DivParent').children[0];
+        elementNodes5.style.color = "red";
+
+        var elementNodes6 = document.querySelector('#DivParent').children;
+        // var i;
+        // for (i = 0; i < elementNodes6.length; i++) {
+        //     elementNodes6[i].style.color = "red";
+        // }
+
+        var elementNodes7 = document.querySelector('#DivParent').children[0].firstChild.nodeValue;
+        alert(elementNodes7);
+
+        var elementNodes8 = document.querySelector('#DivParent').children;
+        var i, result = "";
+        for (i = 0; i < elementNodes8.length; i++) {
+            result += elementNodes8[i].firstChild.nodeValue + "\n";
+            //textContent
+        }
+        alert(result);
+
+        var elementNodes9 = document.querySelector('#DivParent').children;
+        alert(elementNodes9[1].textContent);
+
+        var elementNodes10 = document.querySelector('#DivParent').lastElementChild;
+        elementNodes10.style.color = "red";
+        alert(elementNodes10.firstChild.nodeValue);
+
+        var elementNodes11 = document.querySelector('#head').nextElementSibling.nextElementSibling;
+        elementNodes11.style.color = "red";
+
+        var elementNodes12 = document.querySelector('#p8').previousElementSibling;
+        elementNodes12.style.color = "red";
+    </script>
+</body>
+
+</html>

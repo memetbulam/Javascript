@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 114 Object Oriented Programming (Nesne Yönelimli Programlama)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result" class="mb-5"></p>
+        <p id="result2" class="mb-5"></p>
+        <p id="result3"></p>
+    </div>
+    <script>
+        "use strict";
+        // 1. yöntem
+        // function person(par, par2, par3) {
+        //     this.Name = par;
+        //     this.age = par2;
+        //     this.weight = par3;
+        //     this.getName = function () {
+        //         return this.Name;
+        //     }
+        // }
+        // var myObject = new person("Ahmet", 34, 100);
+        // $('#result').innerHTML = myObject.getName();
+
+        // 2. yöntem
+        class person {
+            constructor(p1, p2, p3) {
+                this.Name = p1;
+                this.Age = p2;
+                this.Weight = p3;
+            }
+            getName() {
+                return this.Name;
+            }
+            getAge() {
+                return this.Age;
+            }
+            getWeight() {
+                return this.Weight;
+            }
+            setName(name) {
+                return this.Name = name;
+            }
+            setAge(age) {
+                return this.Age = age;
+            }
+            setWeight(weight) {
+                return this.Weight = weight;
+            }
+        }
+        var myObject = new person("Ahmet", 30, 80);
+        $('#result').innerHTML = myObject.getName() + "<br>" + myObject.getAge() + "<br>" + myObject.getWeight();
+        $('#result2').innerHTML = myObject.setName("Mehmet") + "<br>" + myObject.setAge(24) + "<br>" + myObject.setWeight(83);
+        $('#result3').innerHTML = myObject.getName() + "<br>" + myObject.getAge() + "<br>" + myObject.getWeight();
+
+    </script>
+</body>
+
+</html>

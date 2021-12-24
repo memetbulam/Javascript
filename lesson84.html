@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 84 Call ve Apply Metodları</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result" class="m-2"></p>
+        <p id="result2" class="m-2"></p>
+        <p id="result3" class="m-2"></p>
+        <p id="result4" class="m-2"></p>
+    </div>
+    <script>
+        // Örnek 1
+        var person = {
+            firstName: "Mehmet",
+            lastName: "BULAM",
+            age: 25,
+            eyeColor: "Brown",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        var people = {
+            firstName: "Ahmet",
+            lastName: "HELVACI"
+        }
+        // Call = fonksiyonu bağımsız değişkenlerini ayrı ayrı alır.
+        // Apply = fonksiyonların argümanını dizi olarak alır
+        var call = person.fullName.call(people);
+        var apply = person.fullName.apply(people);
+        print('result', "Call", call);
+        print('result2', "Apply", apply);
+
+        // Örnek 2
+        print('result3', "Math.max()", Math.max(2, 10, 15, 7, 1));
+        print('result4', "Math.max.apply()", Math.max.apply(null, [2, 10, 7, 12, 1]));
+
+        function print(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + ": </b>" + process;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 63 Use Strict (Bölüm 2)</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+
+    <script>
+        ornek1();
+        function ornek1() {
+            // "use strict";
+            var obj = {};
+            Object.defineProperty(obj, "x", { value: 5, writable: false });
+            obj.x = 10;
+        }
+
+        ornek2();
+        function ornek2() {
+            // "use strict";
+            with (Math) {
+                y = sin(10);
+            }
+        }
+
+        ornek3();
+        function ornek3() {
+            // "use strict";
+            eval("var x=70;");
+            alert(x);
+        }
+
+        ornek4();
+        function ornek4() {
+            // "use strict";
+            var public = "Javascript";
+            document.getElementById('result').innerHTML = public;
+        }
+    </script>
+</body>
+
+</html>

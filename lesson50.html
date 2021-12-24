@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 50 Type Conversion (Tür Dönüşümleri)</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <hr>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <hr>
+    <p id="result5"></p>
+    <hr>
+    <p id="result6"></p>
+    <p id="result7"></p>
+    <hr>
+    <p id="result8"></p>
+    <hr>
+    <p id="result9"></p>
+    <hr>
+    <p id="result10"></p>
+
+    <script>
+        // String()
+        var x = 7;
+        document.getElementById('result').innerHTML =
+            "<b>Number to String() </b> <br>" +
+            "<b>String(x): </b>" + String(x) + " <b>Türü: </b>" + typeof String(x) + "<br>" +
+            "<b>String(700): </b>" + String(700) + " <b>Türü: </b>" + typeof String(700) + "<br>" +
+            "<b>String(10 + 8): </b>" + String(10 + 8) + " <b>Türü: </b>" + typeof String(10 + 8) + "<br>";
+
+        // toString()
+        document.getElementById('result2').innerHTML =
+            "<b>Number to toString() </b> <br>" +
+            "<b>x.toString(): </b>" + x.toString() + " <b>Türü: </b>" + typeof x.toString() + "<br>" +
+            "<b>(700).toString(): </b>" + (700).toString() + " <b>Türü: </b>" + typeof (700).toString() + "<br>" +
+            "<b>(10 + 8).toString(): </b>" + (10 + 8).toString() + " <b>Türü: </b>" + typeof (10 + 8).toString() + "<br>";
+
+        // Boolean
+        var y = true;
+        document.getElementById('result3').innerHTML =
+            "<b>Boolean to String() </b> <br>" +
+            "<b>String(false): </b>" + String(false) + " <b>Türü: </b>" + typeof String(false) + "<br>" +
+            "<b>String(y): </b>" + String(y) + " <b>Türü: </b>" + typeof String(y) + "<br>";
+
+        document.getElementById('result4').innerHTML =
+            "<b>Boolean to toString() </b> <br>" +
+            "<b>false.toString(): </b>" + false.toString() + " <b>Türü: </b>" + typeof false.toString() + "<br>" +
+            "<b>y.toString(): </b>" + y.toString() + " <b>Türü: </b>" + typeof y.toString() + "<br>";
+
+        // Date
+        var z = new Date();
+        document.getElementById('result5').innerHTML =
+            "<b>Date to String() </b> <br>" +
+            "<b>String(new Date()): </b>" + String(new Date()) + " <b>Türü: </b>" + typeof String(new Date()) + "<br>" +
+            "<b>String(z): </b>" + String(z) + " <b>Türü: </b>" + typeof String(z) + "<br>";
+
+        // String
+        var a = "3.14";
+        document.getElementById('result6').innerHTML =
+            "<b>String to Number() </b> <br>" +
+            "<b>Number('10'): </b>" + Number("10") + " <b>Türü: </b>" + typeof Number("10") + "<br>" +
+            "<b>Number(x): </b>" + Number(x) + " <b>Türü: </b>" + typeof Number(x) + "<br>" +
+            "<b>Number(''): </b>" + Number("") + " <b>Türü: </b>" + typeof Number("") + "<br>" +
+            "<b>Number(' '): </b>" + Number(" ") + " <b>Türü: </b>" + typeof Number(" ") + "<br>" +
+            "<b>Number('10 17'): </b>" + Number("10 17") + " <b>Türü: </b>" + typeof Number("10 17") + "<br>" +
+            "<b>Number('Javascript'): </b>" + Number("Javascript") + " <b>Türü: </b>" + typeof Number("Javascript") + "<br>" +
+            "<b>Number(' 100'): </b>" + Number(" 100") + " <b>Türü: </b>" + typeof Number(" 100") + "<br>";
+
+        // String
+        ornek1();
+        function ornek1() {
+            var x = "Javascript"; // String
+            var y = +x; // Number
+            document.getElementById('result7').innerHTML =
+                "<b>String to Number() </b> <br>" +
+                "<b>x = '5': </b>" + x + " <b>Türü: </b>" + typeof x + "<br>" +
+                "<b>y = +x: </b>" + y + " <b>Türü: </b>" + typeof y + "<br>";
+        }
+
+        // Boolean to Number
+        document.getElementById('result8').innerHTML =
+            "<b>Boolean to Number </b> <br>" +
+            "<b>true: </b>" + Number(true) + " <b>Türü: </b>" + typeof Number(true) + "<br>" +
+            "<b>false: </b>" + Number(false) + " <b>Türü: </b>" + typeof Number(false) + "<br>";
+
+        // Date to Number
+        // Milisaniye
+        var d = new Date();
+        document.getElementById('result9').innerHTML =
+            "<b>Date to Number </b> <br>" +
+            "<b>Number(d): </b>" + Number(d) + " <b>Türü: </b>" + typeof Number(d) + "<br>";
+
+        // Null
+        document.getElementById('result10').innerHTML =
+            "<b>Null </b> <br>" +
+            "<b>(7 + null): </b>" + (7 + null) + "<br>" +
+            "<b>('7' + null): </b>" + ("7" + null) + "<br>" +
+            "<b>('7' + '2'): </b>" + ("7" + "2") + "<br>" +
+            "<b>('7' - 2): </b>" + ("7" - 2) + "<br>" +
+            "<b>('7' * '2'): </b>" + ("7" * "2") + "<br>" +
+            "<b>('8' / '2'): </b>" + ("8" / "2");
+
+        // Original Value | Converted to Number | Converted to String | Converted to Boolean
+        //       0        |          0          |         "0"         |         false
+        //       1        |          1          |         "0"         |         true
+        //      "0"       |          0          |         "0"         |         true
+        //      "1"       |          1          |         "1"         |         true
+        //      NaN       |         NaN         |        "NaN"        |         false
+        //      ""        |          0          |         ""          |         false
+        //      []        |          0          |         ""          |         true
+        //   [10,20]      |         NaN         |       "10,20"       |         true
+        // ["Javascript"] |         NaN         |     "Javascript"    |         true
+        // function(){}   |         NaN         |    "function(){}"   |         true
+        //      {}        |         NaN         |  "[object Object]"  |         true
+        //     null       |          0          |        "null"       |         false
+        //   undefined    |         NaN         |      "undefined"    |         false
+    </script>
+</body>
+
+</html>

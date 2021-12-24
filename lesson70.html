@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 70 Window nesnesi screen ve location komutları</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <p id="result" class="ml-2"></p>
+    <p id="result2" class="ml-2"></p>
+    <p id="result3" class="ml-2"></p>
+    <p id="result4" class="ml-2"></p>
+    <p id="result5" class="ml-2"></p>
+    <p id="result6" class="ml-2"></p>
+    <hr>
+    <p id="result7" class="ml-2"></p>
+    <p id="result8" class="ml-2"></p>
+    <p id="result9" class="ml-2"></p>
+    <p id="result10" class="ml-2"></p>
+    <p id="result11" class="ml-2"></p>
+    <hr>
+    <button type="button" class="btn btn-dark ml-2" onclick="load()">Load</button>
+
+    <script>
+        // Ekran genişliğini piksek cinsinden döndürür
+        show('result', "screen.width", screen.width);
+        show('result2', "screen.height", screen.height);
+        // Arayüz özelliklerini piksel cinsinden döndürür
+        show('result3', "screen.availWidth", screen.availWidth);
+        show('result4', "screen.availHeight", screen.availHeight);
+        // screen.colorDepth = Renk Yoğunluğu
+        show('result5', "screen.colorDepth", screen.colorDepth);
+        // screen.pixelDepth = Piksel Yoğunluğu
+        show('result6', "screen.pixelDepth", screen.pixelDepth);
+
+        show('result7', "window.location.href", window.location.href);
+        show('result8', "window.location.hostname", window.location.hostname);
+        show('result9', "window.location.pathname", window.location.pathname);
+        show('result10', "window.location.protocol", window.location.protocol);
+        show('result11', "window.location.port", window.location.port);
+
+        function load() {
+            window.location.assign("https://www.javascript.com");
+        }
+
+        function show(id, t, p) {
+            document.getElementById(id).innerHTML = "<b>" + t + ": </b>" + p + "<br>";
+        }
+    </script>
+</body>
+
+</html>

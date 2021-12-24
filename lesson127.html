@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 127 Javascript forEach Kullanımı (Ecmascript 3)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        var langs = [
+            "PHP",
+            "Asp.Net",
+            "JSP",
+            "coldFusion",
+            "Node JS",
+            "Java",
+            "C#",
+            "Javascript",
+            "Angular JS",
+            "React JS",
+            "Vue JS",
+            "JQUERY",
+            "MSSQL",
+            "MySQL"
+        ];
+        langs.forEach(function (par, index) {
+            ++index;
+            $('#result').innerHTML += index + ". eleman " + par + "<br>";
+        });
+    </script>
+</body>
+
+</html>

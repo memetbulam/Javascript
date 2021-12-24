@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 91 onLoad, onUnLoad ve onScroll Olayları</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        #demo {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<!-- onload="javascript:checkCookies()" -->
+<!-- onunload="myFunction()" -->
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <h1 id="result3">0</h1>
+    <div class="container m-3" id="demo" onscroll="javascript:myScroll()">
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+        <h2>Test</h2>
+    </div>
+    <script>
+        // Örnek 1
+        // function checkCookies() {
+        //     var message = "", result = document.querySelector('#result');
+        //     if (navigator.cookieEnabled == false) {
+        //         message = "Sitenin düzgün çalışması için lütfen çerezlere izin verin!";
+        //     } else {
+        //         message = "Çerezler Aktif!";
+        //     }
+        //     result.innerHTML = message;
+        // }
+
+        // Örnek 2
+        // window.onload = function () {
+        //     var obj = document.querySelector('#result2');
+        //     obj.style.color = "red";
+        //     obj.innerHTML = "window.onload";
+        //     obj.style.fontSize = "32px";
+        // }
+
+        // Örnek 3
+        // function myFunction() {
+        //     alert("Deneme");
+        // }
+
+        // Örnek 4
+        var x = 0;
+        function myScroll() {
+            document.querySelector('#result3').innerHTML = x++;
+        }
+    </script>
+
+</body>
+
+</html>

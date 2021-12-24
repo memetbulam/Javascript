@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 44 Algoritma Bilinci (Çift ve tek sayı bulma, faktöriyel hesaplama)</title>
+</head>
+
+<body>
+    <button type="button" onclick="show();">Start Loop</button>
+    <p id="result"></p>
+    <hr>
+    <button type="button" onclick="show2();">Start Loop</button>
+    <p id="result2"></p>
+    <hr>
+    <button type="button" onclick="show3();">Start Loop</button>
+    <p id="result3"></p>
+    <hr>
+    <button type="button" onclick="show4();">Start Loop</button>
+    <p id="result4"></p>
+
+    <hr>
+    <input type="text" id="takeNumber">
+    <button type="button" onclick="show5();">Hesapla</button>
+    <p id="result5"></p>
+
+    <script>
+        // Örnek 1
+        function show() {
+            var langs = [
+                "PHP",
+                "Asp.Net",
+                "JSP",
+                "coldFusion",
+                "Node JS",
+                "Java",
+                "C#",
+                "Javascript",
+                "Angular JS",
+                "React JS",
+                "Vue JS",
+                "JQUERY",
+                "MSSQL",
+                "MySQL"
+            ];
+            var text = "";
+            var i = 0;
+            var len = langs.length;
+
+            for (; i < len;) {
+                text += langs[i] + "<br>";
+                i++;
+            }
+            document.getElementById('result').innerHTML = text;
+        }
+
+        // Örnek 2
+        function show2() {
+            var langs = [
+                "PHP",
+                "Asp.Net",
+                "JSP",
+                "coldFusion",
+                "Node JS",
+                "Java",
+                "C#",
+                "Javascript",
+                "Angular JS",
+                "React JS",
+                "Vue JS",
+                "JQUERY",
+                "MSSQL",
+                "MySQL"
+            ];
+            var text = "";
+            var i = 0;
+            var len = langs.length;
+
+            for (; i < len; i += 5) {
+                text += langs[i] + "<br>";
+            }
+            document.getElementById('result2').innerHTML = text;
+        }
+
+        // Örnek 3
+        // Çift Sayı Hesaplama
+        function show3() {
+            var text = "", i;
+
+            for (i = 0; i <= 10; i++) {
+                if ((i % 2) == 0) {
+                    text += i + "<br>";
+                }
+            }
+            document.getElementById('result3').innerHTML = text;
+        }
+
+        // Örnek 4
+        // Tek Sayı Hesaplama
+        function show4() {
+            var text = "", i;
+
+            for (i = 0; i <= 11; i++) {
+                if ((i % 2) != 0) {
+                    text += i + "<br>";
+                }
+            }
+            document.getElementById('result4').innerHTML = text;
+        }
+
+        // Örnek 5
+        // Faktöriyel Hesaplama
+        function show5() {
+            var take, i, faktor = 1;
+            take = Number(document.getElementById('takeNumber').value);
+            for (i = 1; i <= take; i++) {
+                faktor = faktor * i;
+            }
+            document.getElementById('result5').innerHTML = faktor;
+        }
+
+    </script>
+</body>
+
+</html>

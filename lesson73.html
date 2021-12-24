@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 73 Timing Events (Zamanlama Olayları)</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+    <button type="button" class="btn btn-dark m-1" onclick="deleteTime=setTimeout(proccess,1000)">setTimeOut</button>
+    <button type="button" class="btn btn-dark m-1" onclick="clearTimeout(deleteTime)">Stop</button>
+    <p id="result" class="m-1"></p>
+    <hr>
+    <button type="button" class="btn btn-dark m-1" onclick="clearInterval(times)">Stop Time</button>
+    <p id="result2" class="m-1"></p>
+    <hr>
+    <p><input type="text" class="m-1" id="data1" name="data1"></p>
+    <p><input type="text" class="m-1" id="data2" name="data2"></p>
+    <p id="result3" class="m-1"></p>
+
+    <script>
+        // Örnek 1
+        // function proccess() {
+        //     show('result', "setTimeout ile bir saniye gecikme", "");
+        // }
+
+        // Örnek 2
+        // var times;
+        // times = setInterval(proccess, 1000);
+        // function proccess() {
+        //     var d = new Date();
+        //     show('result2', "", d.toLocaleTimeString());
+        // }
+
+        // Örnek 3
+        var times;
+        times = setInterval(proccess, 500);
+        function proccess() {
+            var data1, data2, resultValue;
+            data1 = Number(document.getElementById('data1').value);
+            data2 = Number(document.getElementById('data2').value);
+            resultValue = data1 * data2;
+            if (isNaN(data1) || isNaN(data2)) {
+                show('result3', "Lütfen Sayı giriniz!", "");
+            } else if (data1 == "" || data2 == "") {
+                show('result3', "Lütfen Sayı giriniz!", "");
+            } else {
+                show('result3', "Çarpım:", resultValue);
+            }
+        }
+
+        function show(id, t, p) {
+            document.getElementById(id).innerHTML = "<b>" + t + " </b>" + p + "<br>";
+        }
+    </script>
+</body>
+
+</html>

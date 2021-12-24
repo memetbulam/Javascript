@@ -1,0 +1,15 @@
+{
+    "writers": {
+        "firstName": "Ahmet",
+        "lastName": null,
+        "age": 25,
+        "live": true
+    },
+    "writers2": [
+        "Javascript",
+        "Angular JS",
+        "React JS",
+        "Vue JS",
+        "Node JS"
+    ]
+}

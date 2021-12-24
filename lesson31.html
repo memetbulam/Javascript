@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 31 Date (Tarih) Nesnesi</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <hr>
+    <p id="result2"></p>
+    <hr>
+    <p id="result3"></p>
+    <hr>
+    <p id="result4"></p>
+    <hr>
+    <p id="result5"></p>
+    <hr>
+    <p id="result6"></p>
+
+    <script>
+        // Örnek 1
+        ornek1();
+        function ornek1() {
+            var d = new Date();
+            document.getElementById('result').innerHTML = d + "<br> <b>Türü: </b>" + typeof d;
+        }
+
+        // Örnek 2
+        ornek2();
+        function ornek2() {
+            var d = new Date("April 21, 2021");
+            document.getElementById('result2').innerHTML = d;
+        }
+
+        // Örnek 3
+        // Yıl, Ay, Gün, Saat, Dakika, Saniye, Milisaniye
+        ornek3();
+        function ornek3() {
+            var d = new Date(90, 4, 25, 13, 30, 20, 0);
+            document.getElementById('result3').innerHTML = d + "<br> <b>Türü: </b>" + typeof d.toString();
+        }
+
+        // Örnek 4
+        ornek4();
+        function ornek4() {
+            var d = new Date();
+            document.getElementById('result4').innerHTML = "<b>toUTCString(): </b>" + d.toUTCString();
+        }
+
+        // Örnek 5
+        ornek5();
+        function ornek5() {
+            var d = new Date();
+            document.getElementById('result5').innerHTML = "<b>toDateString(): </b>" + d.toDateString();
+        }
+
+        // Örnek 6
+        // T= Tarih, Z= UTC, Saat belirtilmezse tarayıcının saati kullanılır
+        ornek6();
+        function ornek6() {
+            var d = new Date("2021-11-25T18:48:20Z");
+            document.getElementById('result6').innerHTML = d;
+        }
+
+    </script>
+</body>
+
+</html>

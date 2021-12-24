@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 133 JSON ile Array Kullanımı</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        // Örnek 1
+        // let obj, i;
+        // obj = {
+        //     "firstName": "Ahmet",
+        //     "lastName": "HELVACI",
+        //     "age": 25,
+        //     "info": ["57", "1.65", "Black"]
+        // };
+        // obj["info"][2] = "Yellow";
+        // delete obj["info"][0];
+        // for (i in obj["info"]) {
+        //     $('#result').innerHTML += obj["info"][i] + "<br>";
+        // }
+
+        // Örnek 2
+        let obj, i, j, result = "";
+        obj = {
+            "firstName": "Ahmet",
+            "lastName": "HELVACI",
+            "age": 25,
+            "info": ["57", "1.65", "Black"],
+            "cars": [
+                { "nameCar": "Ford", "models": ["fiesta", "focus", "mustang"] },
+                { "nameCar": "BMW", "models": ["320", "x3", "x5"] },
+                { "nameCar": "Fiat", "models": ["500", "Panda"] }
+            ]
+        };
+        for (i in obj["cars"]) {
+            result += "<h4>" + obj["cars"][i]["nameCar"] + "</h4><br>";
+            for (j in obj["cars"][i]["models"]) {
+                result += obj["cars"][i]["models"][j] + "<br>";
+            }
+        }
+        $('#result').innerHTML = result;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 20 Global ve Local Değişkenler</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <script>
+        // local değişkenler bir fonksiyon başladığında oluşur fonksiyon bittiğinde silinir.
+        function Scope(par1, par2) {
+            var name = "Node JS";
+        };
+        function Test() {
+            var name = "Angular JS";
+        };
+
+        // 1. yöntem: Global değişkenlere her yerde ulaşılabilir.
+        var scope = "React JS";
+        var name = "JQUERY";
+        document.getElementById('result').innerHTML = scope;
+
+        // 2. yöntem: Global değişkenlere her yerde ulaşılabilir.
+        Global();
+        function Global() {
+            name = "Vue JS";
+        };
+        (function () {
+            alert('Ahmet Reis');
+        })();
+        document.getElementById('result2').innerHTML = name;
+    </script>
+</body>
+
+</html>

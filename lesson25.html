@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 25 Number Veri Türü</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+    <p id="result8"></p>
+    <p id="result9"></p>
+    <p id="result10"></p>
+
+    <!--Örnek4.3:-->
+    <input type="text" placeholder="Lütfen Sayı Girin" id="Number">
+    <button type="button" onclick="ornek4uc();">Click</button>
+
+    <p id="result11"></p>
+
+    <script>
+        // Örnek 1:
+        var a = 12e4; // 120000
+        var b = 12e-4; //0,0012
+        document.getElementById('result').innerHTML = "<b>12e4: </b>" + a;
+        document.getElementById('result2').innerHTML = "<b>12e-4: </b>" + b;
+
+        // Örnek 2:
+        var TamSayi = 999999999999999; // 15 haneli tam sayı
+        document.getElementById('result3').innerHTML = "<b>Tam Sayılar(15 Haneli): </b>" + TamSayi;
+
+        // Örnek 3:
+        // ondalıklı sayıları tam sayıya çeviriyoruz
+        var ondaliks1 = 0.1;
+        var ondaliks2 = 0.2;
+        var ondaliks3 = (0.1 * 10 + 0.2 * 10) / 10;
+        var ondaliktoplam = ondaliks1 + ondaliks2;
+        document.getElementById('result4').innerHTML = "<b>Ondalıklı sayı toplam:  </b>" + ondaliktoplam;
+        document.getElementById('result5').innerHTML = "<b>Ondalıklı sayı toplam:  </b>" + ondaliks3;
+
+        // Örnek 4:
+        // Stringden sonra yazılan veri türü string olarak algılanır.
+        var x = 10;
+        var y = 60;
+        var z = "<b>Sonuç: </b>" + x + y;
+        document.getElementById('result6').innerHTML = z;
+
+        // Örnek 4.1:
+        ornek4bir();
+        function ornek4bir() {
+            var x = "10";
+            var y = 60;
+            var z = x * y;
+            var a = x / y;
+            document.getElementById('result7').innerHTML = "<b>Çarpım: </b>" + z;
+            document.getElementById('result8').innerHTML = "<b>Bölüm: </b>" + a;
+        }
+        // Örnek 4.2:
+        ornek4iki();
+        function ornek4iki() {
+            var x = 100 / "JS"; // NAN = Not a Number
+            document.getElementById('result9').innerHTML = "<b>isNaN: </b>" + isNaN(x);
+        }
+
+        // Örnek 4.3:
+        function ornek4uc() {
+            var x = document.getElementById('Number').value;
+            console.log(x.length);
+            if (x.length == 0) {
+                document.getElementById('result10').innerHTML = "";
+            } else {
+                if (isNaN(x)) {
+                    document.getElementById('result10').innerHTML = "<b>Lütfen Sadece Sayı Girin!</b>";
+                } else
+                    document.getElementById('result10').innerHTML = "<b>Girdiğiniz Sayı: </b>" + x;
+            }
+        }
+
+        // Örnek 5:
+        ornek5();
+        function ornek5() {
+            var x = 2;
+            var text = "";
+
+            while (x != Infinity) {
+                x *= x;
+                text += x + "<br>";
+            }
+            document.getElementById('result11').innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

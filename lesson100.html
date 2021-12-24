@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 100 Element oluşturma, ekleme, kaldırma ve değiştirme</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3" id="DivParent">
+        <p id="p1">Angular JS</p>
+        <p id="p2">React JS</p>
+        <p id="p3">Vue JS</p>
+        <p id="p4">Node JS</p>
+    </div>
+    <div class="container m-3" >
+        <button type="button" class="btn btn-dark" onclick="javascript:createElementDom()">Element Ekle</button>
+        <button type="button" class="btn btn-dark" onclick="javascript:removeElementDom()">Element Kaldır</button>
+        <button type="button" class="btn btn-dark" onclick="javascript:replaceElementDom()">Element Değiştir</button>
+    </div>
+    <script>
+        // Örnek 1
+        // function createElementDom() {
+        //     var parentDiv = document.querySelector('#DivParent');
+        //     var p = document.createElement("p");
+        //     var text = document.createTextNode("Javascript");
+        //     parentDiv.appendChild(p);
+        //     p.appendChild(text);
+        // }
+
+        function createElementDom() {
+            var parentDiv = document.querySelector('#DivParent');
+            var p3 = document.querySelector('#p3');
+            var p = document.createElement("p");
+            var text = document.createTextNode("Javascript");
+            p.appendChild(text);
+            parentDiv.insertBefore(p, p3);
+        }
+
+        function removeElementDom() {
+            var p3 = document.querySelector('#p3');
+            // parentDiv.removeChild(p3);
+            p3.parentNode.removeChild(p3);
+        }
+
+        function replaceElementDom() {
+            var parentDiv = document.querySelector('#DivParent');
+            var p1 = document.querySelector('#p1');
+            var p = document.createElement("p");
+            var text = document.createTextNode("Yeni Metin");
+            p.appendChild(text);
+            parentDiv.replaceChild(p, p1);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 81 Object Prototypes</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+        <p id="result2"></p>
+    </div>
+    <script>
+        function Person(first, last, age, color) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = color;
+            this.fullName = function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        Person.prototype.hair = "yellow";
+        Person.prototype.changeName = function (name) {
+            return this.firstName = name;
+        }
+        var people = new Person("Ahmet", "HELVACI", 30, "Brown");
+        people.changeName("Mehmet");
+        print('result', "people.hair:", people.hair);
+        print('result2', "people.firstName:", people.firstName);
+
+
+        function print(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + " </b>" + process;
+        }
+    </script>
+
+</body>
+
+</html>

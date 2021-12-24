@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 93 onMouseDown, onMouseUp, onFocus, onDblClick, onMouseMove, onKeyDown, onKeyUp Olayları</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        #demo {
+            width: 200px;
+            height: 60px;
+            color: white;
+            background-color: crimson;
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container m-3">
+        <img src="img/bulboff.png" width="100" height="100" alt="" id="picture" />
+        <br>
+        <div id="demo" class="mt-2 mb-2">Javascript</div>
+        <input type="text" id="username" name="username">
+        <p id="result"></p>
+    </div>
+    <script>
+        // Örnek 1
+        // var x = document.querySelector('#picture');
+        // x.onmousemove = function () {
+        //     this.src = "img/bulbon.png";
+        // }
+        // x.onmouseout = function () {
+        //     this.src = "img/bulboff.png";
+        // }
+
+        // Örnek 2
+        // var result = document.querySelector('#result');
+        // var demo = document.querySelector('#demo');
+        // var username = document.querySelector('#username');
+        // demo.onmousedown = function () {
+        //     this.style.backgroundColor = "blue";
+        //     this.innerHTML = "Merhaba";
+        //     this.style.color = "white";
+        // }
+        // demo.onmouseup = function () {
+        //     this.style.backgroundColor = "green";
+        //     this.innerHTML = "Güle Güle";
+        // }
+        // demo.ondblclick = function () {
+        //     this.style.backgroundColor = "yellow";
+        //     this.style.color = "black";
+        //     this.innerHTML = "Çift Tıkladın!";
+        // }
+        // username.onfocus = function () {
+        //     this.style.backgroundColor = "yellow";
+        //     this.style.color = "black";
+        // }
+        // username.onblur = function () {
+        //     this.style.backgroundColor = "green";
+        //     this.style.color = "white";
+        // }
+
+        // Örnek 3
+        var result = document.querySelector('#result');
+        var username = document.querySelector('#username');
+        // onkeypress
+        username.onkeypress = function () {
+            result.innerHTML = "onkeypress: Basılı Tutuyorsun!";
+        }
+        username.onkeydown = function () {
+            result.innerHTML = "onkeydown: Bir tuşa basıyorsun!";
+        }
+        username.onkeyup = function () {
+            result.innerHTML = "onkeyup: Elini çektin!";
+        }
+    </script>
+</body>
+
+</html>

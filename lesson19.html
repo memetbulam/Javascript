@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 19 Objects (Nesneler)</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        // Nesne
+        var car = {
+            name: "Nissan",
+            model: "400A",
+            color: "Black",
+            start: function () {
+                return this.name + " " + this.model + " çalıştırıldı!";
+            },
+            drive: function () {
+                return this.name + " " + this.model + " Kullanılıyor!";
+            },
+            break: function () {
+                return this.name + " " + this.model + " Frene basılıyor!";
+            },
+            stop: function () {
+                return this.name + " " + this.model + " Durduruldu!";
+            }
+        };
+        // 1. nesne çağırma yöntemi:
+        // document.getElementById('result').innerHTML = car.start() + "<br>" + car.drive() + "<br>" + car.break() + "<br>" + car.stop();
+        // 2. nesne çağırma yöntemi:
+        document.getElementById('result').innerHTML = car["name"];
+
+        // Herhangi bir değişkeni nesneye dönüştürme
+        var x=new String();
+        var y=new Number();
+        var z=new Boolean();
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 41 if-else statements (Koşullu ifadeler)</title>
+</head>
+
+<body>
+    <p><input type="text" id="midterm" placeholder="Vize"></p>
+    <p><input type="text" id="final" placeholder="Final"></p>
+    <button type="button" onclick="noteResult();">Sonuç</button>
+    <p id="result"></p>
+
+    <script>
+        function noteResult() {
+            var midtermNote, finalNote, message, average;
+            midtermNote = Number(document.getElementById('midterm').value);
+            finalNote = Number(document.getElementById('final').value);
+            average = midtermNote * 0.3 + finalNote * 0.7;
+
+            if (isNaN(midtermNote)) {
+                message = "Lütfen 0 - 100 arasında not giriniz!";
+            } else if (isNaN(finalNote)) {
+                message = "Lütfen 0 - 100 arasında not giriniz!";
+            } else {
+                if (average < 45 && average >= 0) {
+                    message = "Dersten Kaldınız. Sonucunuz: FF";
+                } else if (average >= 45 && average <= 60) {
+                    message = "Sonucunuz: DD";
+                } else if (average > 60 && average <= 80) {
+                    message = "Sonucunuz: CC";
+                } else if (average > 80 && average <= 90) {
+                    message = "Sonucunuz: BB";
+                } else if (average > 90 && average <= 100) {
+                    message = "Sonucunuz: AA";
+                } else {
+                    message = "Lütfen 0 - 100 arasında not giriniz!";
+                }
+            }
+            document.getElementById('result').innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>

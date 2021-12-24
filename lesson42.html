@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 42 Switch Statement (Çoklu Koşullar)</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        var day;
+        var d = new Date().getDay();
+        switch (d) {
+            case 0: day = "Pazar"; break;
+            case 1: day = "Pazartesi"; break;
+            case 2: day = "Salı"; break;
+            case 3: day = "Çarşamba"; break;
+            case 4: day = "Perşembe"; break;
+            case 5: day = "Cuma"; break;
+            case 6: day = "Cumartesi"; break;
+            case "JS": day = "Javascript"; break;
+            default: day = "Böyle bir gün yok";
+        }
+
+        document.getElementById('result').innerHTML = day;
+    </script>
+</body>
+
+</html>

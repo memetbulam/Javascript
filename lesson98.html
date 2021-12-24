@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 98 HTML DOM Düğümlerini Javascript ile Kullanmak</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3" id="DivParent">
+        <h1 id="head" ajax="open">JAVASCRİPT</h1>
+        <p id="p1">Angular JS</p>
+        <p id="p2">React JS</p>
+        <p id="p3">Vue JS</p>
+        <p id="p4">Node JS</p>
+        <p id="p5">PHP</p>
+        <p id="p6">Asp.NET</p>
+        <p id="p7">JSP</p>
+        <span id="p8">ColdFusion</span><br>
+        <img src="img/jsNodeType.PNG" class="mt-3" alt="" width="500" height="350">
+    </div>
+    <script>
+        var elementNodes = document.querySelector('#title').firstChild.nodeValue;
+        alert(elementNodes);
+
+        var elementNodes2 = document.querySelector('#DivParent').firstChild.nodeValue;
+        alert(elementNodes2);
+
+        var elementNodes3 = document.querySelector('#head').childNodes[0].nodeValue;
+        alert(elementNodes3);
+
+        var elementNodes4 = document.querySelector('#DivParent').nodeName;
+        alert(elementNodes4);
+
+        var elementNodes5 = document.querySelector('#head').getAttributeNode('id').nodeName;
+        alert(elementNodes5);
+
+        var elementNodes6 = document.querySelector('#p4').childNodes[0].nodeName;
+        alert(elementNodes6);
+
+        var elementNodes7 = document.body.nodeName;
+        alert(elementNodes7);
+
+        var elementNodes8 = document.documentElement.nodeName;
+        alert(elementNodes8);
+
+        var elementNodes9 = document.querySelector('#p4').nodeValue;
+        alert(elementNodes9);
+        var elementNodes10 = document.querySelector('#p4').firstChild.nodeValue;
+        alert(elementNodes10);
+
+        var elementNodes11 = document.querySelector('#head').getAttributeNode('ajax').nodeValue;
+        alert(elementNodes11);
+        var elementNodes12 = document.querySelector('#head').getAttributeNode('ajax').nodeName;
+        alert(elementNodes12);
+        var elementNodes13 = document.querySelector('#head').getAttributeNode('ajax').nodeType;
+        alert(elementNodes13);
+
+        var elementNodes14 = document.querySelector('#p6').nodeType;
+        alert(elementNodes14);
+        var elementNodes15 = document.querySelector('#p6').firstChild.nodeType;
+        alert(elementNodes15);
+
+        var elementNodes16 = document.documentElement.nodeType;
+        alert(elementNodes16);
+
+        var elementNodes17 = document.nodeType;
+        alert(elementNodes17);
+
+    </script>
+</body>
+
+</html>

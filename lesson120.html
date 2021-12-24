@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 120 Ecmascript 6 Generators Kullanımı</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        const $ = (id) => document.querySelector(id);
+    </script>
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        "use strict";
+        // Örnek 1
+        // function* gen() {
+        //     yield console.log("Hello");
+        //     yield console.log("Javascript");
+        //     yield console.log("Ecmascript 6");
+        //     return console.log("Generators code");
+        // }
+        // let newGen = gen();
+        // newGen.next();
+        // newGen.next();
+        // newGen.next();
+        // newGen.next();
+
+        // Örnek 2
+        // function* gen() {
+        //     yield "Hello";
+        //     yield "Javascript";
+        //     yield "Ecmascript 6";
+        //     return "Generators code";
+        // }
+        // let newGen = gen();
+        // console.log(newGen.next());
+        // console.log(newGen.next());
+        // console.log(newGen.next());
+        // console.log(newGen.next());
+
+        // Örnek 3
+        // function* gen() {
+        //     let x = yield "Hello";
+        //     let y = yield "Javascript";
+        //     let z = yield "Ecmascript 6";
+        //     return x * y * z;
+        // }
+        // let newGen = gen();
+
+        // console.log(newGen.next());
+        // console.log(newGen.next(5));
+        // console.log(newGen.next(5));
+        // console.log(newGen.next(5));
+
+        // Örnek 4
+        // function* gen() {
+        //     yield "Hello";
+        //     yield "Javascript";
+        //     yield "Ecmascript 6";
+        //     return "Generators code";
+        // }
+        // let newGen = gen();
+        // let item = newGen.next();
+        // $('#result').innerHTML = "<b>Değer: </b>" + item.value + "<b>Done: </b>" + item.done + "<br>";
+        // item = newGen.next();
+        // $('#result').innerHTML += "<b>Değer: </b>" + item.value + "<b>Done: </b>" + item.done + "<br>";
+        // item = newGen.next();
+        // $('#result').innerHTML += "<b>Değer: </b>" + item.value + "<b>Done: </b>" + item.done + "<br>";
+        // item = newGen.next();
+        // $('#result').innerHTML += "<b>Değer: </b>" + item.value + "<b>Done: </b>" + item.done + "<br>";
+
+        // Örnek 5
+        function* gen() {
+            yield "Hello";
+            yield "Javascript";
+            yield "Ecmascript 6";
+            return "Generators code";
+        }
+        let newGen = gen();
+        let item = newGen.next();
+        for (let item of gen())
+            $('#result').innerHTML += item + "<br>";
+
+    </script>
+</body>
+
+</html>

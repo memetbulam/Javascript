@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 26 Number Data Type (Bölüm 2)</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+
+    <script>
+        // Örnek 1:
+        // Infinity veri türü numberdir.
+        ornek1();
+        function ornek1() {
+            var x = 70 / 0;
+            var y = -70 / 0;
+            document.getElementById('result').innerHTML = "<b>x: </b>" + x + "<br><b>y: </b>" + y;
+        }
+
+        // Örnek 2:
+        ornek2();
+        function ornek2() {
+            var x = 128; // Onluk sistem
+            var a = x.toString(16); // hexadecimal 16'lık
+            var b = x.toString(8); // Octal 8'li
+            var c = x.toString(2); // binary 2'li
+            document.getElementById('result2').innerHTML = "<b>Onluk Sistem: </b>" + x
+                + "<br><b>Hexadecimal(16) Sistem: </b>" + a
+                + "<br><b>Octal(8) Sistem: </b>" + b
+                + "<br><b>Binary(2) Sistem: </b>" + c;
+        }
+
+        // Örnek 3:
+        ornek3();
+        function ornek3() {
+            var x = 700;
+            var y = new Number(700);
+            document.getElementById('result3').innerHTML = "<b>Number: </b>" + typeof x + "<br><b>Nesne: </b>" + typeof y
+                + "<br><b>Değerleri Eşit midir? </b> " + (x == y)
+                + "<br><b>Değer ve Tür Eşit midir? </b>" + (x === y);
+        }
+    </script>
+</body>
+
+</html>

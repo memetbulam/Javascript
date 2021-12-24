@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 37 Array ve Object Sıralamaları</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <button type="button" onclick="sortArray();">Random Sort</button>
+    <p id="result2"></p>
+    <hr>
+    <button type="button" onclick="sortArray2();">Index Numbers</button>
+    <p id="result3"></p>
+    <hr>
+    <button type="button" onclick="sortArray3();">Reverse Numbers</button>
+    <p id="result4"></p>
+    <hr>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <hr>
+    <p id="result7"></p>
+    <button type="button" onclick="sortPcArray();">Pc Sırala</button>
+    <p id="result8"></p>
+    <script>
+        var numbers = [45, 100, 1, 8, 17, 30, 11];
+        Show('result', 'Numbers:', numbers);
+
+        // Örnek 1
+        // Random Numbers
+        function sortArray() {
+            numbers.sort(function (x, y) {
+                return 0.6 - Math.random();
+            })
+            Show('result2', 'Numbers:', numbers);
+        }
+
+        // Örnek 2
+        // index ile çağırma
+        function sortArray2() {
+            numbers.sort(function (x, y) {
+                return x - y;
+            })
+            Show('result3', '', numbers[1]);
+        }
+
+        // Örnek 3
+        // Ters sıralama
+        function sortArray3() {
+            numbers.sort(function (x, y) {
+                return y - x;
+            })
+            Show('result4', '', numbers);
+        }
+
+        // Örnek 4
+        // Max - Min Array
+        function maxArray(take) {
+            return Math.max.apply(null, take);
+        }
+        function minArray(take) {
+            return Math.min.apply(null, take);
+        }
+        Show('result5', 'Max Number:', maxArray(numbers));
+        Show('result6', 'Min Number:', minArray(numbers));
+
+        // Örnek 5
+        var pc = [
+            { type: "Asus", ram: "16GB", year: "2016" },
+            { type: "HP", ram: "8GB", year: "2008" },
+            { type: "MSI", ram: "32GB", year: "2021" }
+        ];
+        Show('result7', '1. PC:',
+            pc[0].type + "-" + pc[0].ram + "-" + pc[0].year + "<br>" +
+            '<b>2. PC: </b>' + pc[1].type + "-" + pc[1].ram + "-" + pc[1].year + "<br>" +
+            '<b>3. PC: </b>' + pc[2].type + "-" + pc[2].ram + "-" + pc[2].year
+        );
+
+        function sortPcArray() {
+            pc.sort(function (x, y) {
+                return x.year - y.year;
+            })
+            Show("result8", '',
+                pc[0].type + "-" + pc[0].ram + "-" + pc[0].year + "<br>" +
+                pc[1].type + "-" + pc[1].ram + "-" + pc[1].year + "<br>" +
+                pc[2].type + "-" + pc[2].ram + "-" + pc[2].year
+            );
+        }
+
+        function Show(par, par2, par3) {
+            document.getElementById(par).innerHTML = "<b>" + par2 + " </b>" + par3;
+        }
+    </script>
+</body>
+
+</html>

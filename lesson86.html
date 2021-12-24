@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 86 HTML DOM Metodları ve Document Nesnesi</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result">Bu bir Paragraf</p>
+        <img src="img/jsHtmlNesneBulma1.PNG" width="800" height="500" alt="HTML Nesne Bulma">
+        <img src="img/jsHtmlNesneBulma2.PNG" width="800" height="500" alt="HTML Nesne Bulma">
+    </div>
+    <script>
+        var idUlas = document.getElementById('result');
+        // getElementByTagName
+        // getElementByClassName
+
+        // document.createElement
+        // document.removeChild
+        // document.appendChild
+        // document.replaceChild
+        // document.write
+        var event = document.getElementById('result');
+        event.onclick = function () { alert("onClick") };
+
+    </script>
+
+</body>
+
+</html>

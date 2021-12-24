@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 68 Javascript Versiyonları ve JSON Nedir</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        // JSON
+        // Veriler virgülle ayrılır
+        // Veri Adı  :  Değer,  Veri Adı : Değer
+        var txt = '{"langs":[{ "firstName": "Node", "lastName": "JS" },{ "firstName": "Angular", "lastName": "JS" },' +
+            '{ "firstName": "React", "lastName": "JS" },{ "firstName": "Vue", "lastName": "JS" }]}';
+        var obj = JSON.parse(txt);
+        document.getElementById('result').innerHTML = obj.langs[2].firstName + " " + obj.langs[2].lastName;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 95 EventListener Kabarcıklanma ve Yakalama Olayları</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .change {
+            background-color: darkgreen;
+            color: white;
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container m-3">
+        <button type="button" id="Btn" class="btn btn-dark">Click or Double Click</button>
+        <p id="result" class="mt-3"></p>
+
+        <!--Örnek 3-->
+        <div class="change mb-3" id="Div1">
+            <p id="p1">Kabarcıklanma olayı (içten dışa - false)</p>
+        </div>
+        <div class="change" id="Div2">
+            <p id="p2">Yakalama olayı (dıştan içe - true)</p>
+        </div>
+    </div>
+    <script>
+        // Örnek 1
+        // var Btn = document.querySelector('#Btn');
+        // var result = document.querySelector('#result');
+        // window.addEventListener("resize", function () {
+        //     document.querySelector('#result').innerText = Math.random();
+        // })
+
+        // Örnek 2
+        // var num1 = 7, num2 = 10;
+        // var Btn = document.querySelector('#Btn');
+        // var result = document.querySelector('#result');
+        // Btn.addEventListener("dblclick", function () {
+        //     process(num1, num2);
+        // });
+        // function process(p1, p2) {
+        //     document.querySelector('#result').innerText = p1 * p2;
+        // }
+
+        // Örnek 3
+        var p1, p2, Div1, Div2;
+        var p1 = document.querySelector('#p1');
+        var p2 = document.querySelector('#p2');
+        var Div1 = document.querySelector('#Div1');
+        var Div2 = document.querySelector('#Div2');
+        var Btn = document.querySelector('#Btn');
+        var result = document.querySelector('#result');
+
+        p1.addEventListener("click", function () {
+            alert("p1 paragrafına tıkladın!");
+        }, false);
+        Div1.addEventListener("click", function () {
+            alert("Div1 elementine tıkladın!");
+        }, false);
+        p2.addEventListener("click", function () {
+            alert("p2 paragrafına tıkladın!");
+        }, true);
+        Div2.addEventListener("click", function () {
+            alert("Div2 elementine tıkladın!");
+        }, true);
+    </script>
+</body>
+
+</html>

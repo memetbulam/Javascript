@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 51 Bitwise Operations (Bit Düzeyinde İşlemler)</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+
+    <script>
+        // &
+        show('result', "0 & 0", 0 & 0);
+        show('result1', "1 & 0", 1 & 0);
+        show('result2', "1 & 1", 1 & 1);
+
+        // |
+        show('result3', "0 | 0", 0 | 0);
+        show('result4', "1 | 0", 1 | 0);
+
+        // ^
+        show('result5', "1 ^ 1", 1 ^ 1);
+        show('result6', "1 ^ 0", 1 ^ 0);
+
+        function show(id, text, process) {
+            document.getElementById(id).innerHTML = "<b>" + text + ": </b>" + process;
+        }
+    </script>
+</body>
+
+</html>

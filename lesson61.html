@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 61 Hoisting</title>
+</head>
+
+<body>
+    <button type="button" onclick="ornek1()">Örnek 1</button>
+    <p id="result"></p>
+    <button type="button" onclick="ornek2()">Örnek 2</button>
+    <p id="result2"></p>
+
+    <script>
+        function ornek1() {
+            var message;
+            message = document.getElementById('result');
+            x = 7;
+
+            message.innerHTML = x;
+            var x;
+        }
+
+        function ornek2() {
+            var message, x;
+            message = document.getElementById('result2');
+            x = 7;
+
+            message.innerHTML = x + " : " + y;
+            var y = 5;
+        }
+
+    </script>
+</body>
+
+</html>

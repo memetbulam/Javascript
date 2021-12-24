@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 33 Arrays (Diziler)</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <button type="button" onclick="add();">Add(Bootstrap5)</button>
+    <button type="button" onclick="add2();">Add 2(MySQL)</button>
+    <p id="result3"></p>
+    <script>
+        var langs = ["PHP","Javascript"];
+        var text, i;
+        text = "<ul>";
+        //, "Asp.Net", "JSP", "NodeJS", "Javascript", "Angular JS", "React JS", "Vue JS", "HTML5", "CSS3"
+        for (i = 0; i < langs.length; i++) {
+            text = text + "<li>" + langs[i] + "</li>";
+        }
+        text += + "</ul>";
+        document.getElementById('result').innerHTML = langs +
+            "<br><b>Türü: </b>" + typeof langs +
+            "<br><b>langs[4]: </b>" + langs[4] +
+            "<br><b>langs.length: </b>" + langs.length +
+            "<br><b>text: </b>" + text;
+
+        // Örnek 2
+        document.getElementById('result2').innerHTML = langs;
+        function add() {
+            langs.push("Bootstrap5");
+            document.getElementById('result2').innerHTML = langs;
+        }
+
+        // Örnek 2.1
+        document.getElementById('result2').innerHTML = langs;
+        function add2() {
+            langs.length = 1;
+            langs[1] = "MySQL";
+            document.getElementById('result2').innerHTML = langs;
+        }
+    </script>
+</body>
+
+</html>

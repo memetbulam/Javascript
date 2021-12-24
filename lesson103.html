@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title id="title">Ders 103 Sayfayı Süreli Yönlendirme Uygulaması</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container m-3">
+        <p id="result"></p>
+    </div>
+    <script>
+        // window.location.href = "https://www.google.com";
+        go("#result", "http://javascript.test/lesson103.html", 5);
+        function go(ID, Address, second) {
+            if (second === 0) {
+                window.location.href = Address;
+                return;
+            }
+            document.querySelector(ID).textContent = second + " saniye sonra yönlendirileceksiniz!";
+            second--;
+            setTimeout(function () {
+                go(ID, Address, second);
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

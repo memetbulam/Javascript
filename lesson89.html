@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ders 89 HTML DOM ile HTML Elementlerini Değiştirme</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        #box {
+            width: 550px;
+            height: 550px;
+            position: relative;
+            background: green;
+        }
+
+        #move {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Örnek 1 ve 2-->
+    <div class="container m-3">
+        <p id="result">CSS ile değiştirilecek</p>
+        <img src="img/bulboff.png" id="picture" width="100" height="100" alt="Kapalı">
+        <button type="button" class="btn btn-dark" onclick="javascript:changeCSS()">Change</button>
+    </div>
+
+    <!--Örnek 3-->
+    <div class="container m-3">
+        <p id="result"></p>
+        <div id="box">
+            <div id="move"></div>
+        </div>
+        <button type="button" class="btn btn-dark" onclick="javascript:changeCSS()">Change</button>
+    </div>
+    <script>
+        // Örnek 1
+        // function changeCSS() {
+        //     document.querySelector('#picture').src = "img/bulbon.png";
+        //     document.querySelector('#picture').setAttribute("width", "150");
+        // }
+
+        // Örnek 2
+        // function changeCSS() {
+        //     var changeCss = document.querySelector('#result');
+        //     changeCss.style.color = "white";
+        //     changeCss.style.backgroundColor = "green";
+        //     changeCss.style.padding = "16px";
+        // }
+
+        // Örnek 3
+        function changeCSS() {
+            var changeCss, position = 0, speed;
+            changeCss = document.querySelector('#move');
+            speed = setInterval(repeat, 2);
+            function repeat() {
+                if (position == 500) {
+                    clearInterval(speed);
+                }
+                else {
+                    position++;
+                    changeCss.style.top = position + "px";
+                    changeCss.style.left = position + "px";
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
